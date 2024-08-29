@@ -1,5 +1,7 @@
 Website Contents and Sections:
 
+Font family: Aeonik
+
 1. Home Page:
     # Navbar: Home, Products, About, Contact, Search Input, login, signup and user dashboard.
     # Hero Section
