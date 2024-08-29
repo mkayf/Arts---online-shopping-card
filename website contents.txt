@@ -1,0 +1,12 @@
+Website Contents and Sections:
+
+1. Home Page:
+    # Navbar: Home, Products, About, Contact, Search Input, login, signup and user dashboard.
+    # Hero Section
+    # New Arrivals,
+    # Shop by category,
+    # Promotion banner,
+    # Testimonials
+    # Newsletter subscription
+    # Footer
+
