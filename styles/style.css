@@ -8,3 +8,159 @@
     --bg-color: #F7F7F8;
     --primary-color: #3795BD;
 }
+
+body{
+    height: 200vh;
+    background-color: #3795BD;
+}
+
+/* Navbar styling goes here */
+
+header nav{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    padding: 0 50px;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .sticky{
+    position: fixed;
+    left:  0;
+    top: 0;
+    background-color: var(--bg-color);
+    -webkit-transition: all 15ms ease-in-out;
+    -moz-transition: all 15ms ease-in-out;
+    -o-transition: all 15ms ease-in-out;
+    -ms-transition: all 15ms ease-in-out;
+    transition: all 15ms ease-in-out;
+    animation-name: stickyAnimation;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both ;
+    animation-fill-mode: both;
+    -webkit-box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
+    -moz-box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
+    box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
+}
+
+@keyframes stickyAnimation {
+    0%{
+        opacity: 0;
+        -webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+header nav .collapse-btn{
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+header nav .collapse-btn img{
+    width: 1.8rem;
+}
+
+header nav .nav-links-div, .nav-logo-div, .nav-icons-div{
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+header nav .nav-link-ul{
+    display: flex;
+    width: 100%;
+    padding-left: 0 !important;
+}
+
+header nav .nav-links-div ul li{
+    list-style: none;
+    margin: 0 16px;
+}
+
+header nav .nav-links-div ul li a{
+    text-decoration: none    ;
+    color: black;
+}
+
+header nav .nav-logo-div{
+    padding-right: 16px;
+}
+
+header nav .nav-links-div{
+    justify-content: flex-start;
+}
+
+header nav .nav-icons-div{
+    justify-content: flex-end;
+}
+
+header nav .nav-icons-div img{
+    margin: 0 10px;
+    width: 1.4rem;
+    cursor: pointer ;
+}
+
+header .offcanvas{
+    background-color: var(--bg-color);
+    width: 250px !important;
+}
+
+header .offcanvas-links{
+    /* border: 2px solid red; */
+    padding-left: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+header .offcanvas-links li{
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+header .offcanvas-links li a{
+    text-decoration: none;
+    color: black
+}
+
+/* Navbar styling ends here */
+
+
+/* Media queries */
+@media (max-width: 992px){
+    header nav .nav-links-div{
+        justify-content: flex-start;
+    }
+    header nav .nav-link-ul{
+        display: none;
+    }
+    header nav .collapse-btn{
+        display: block;
+    }
+    header nav .nav-icons-div img{
+        margin: 0 6px;
+        width: 1.2rem;
+    }
+}
+
+@media (max-width: 576px){
+    header nav{
+        padding: 0 16px;
+    }
+    
+}
