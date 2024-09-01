@@ -16,7 +16,43 @@
      <?php include './partials/navbar.php'; ?>
     <!-- Navbar -->
 
+    <div>
+    
+    The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
 
+Writing markup with JSX 
+The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
+
+JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
+
+Writing markup with JSX 
+The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
+
+JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
+
+Writing markup with JSX 
+The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
+
+JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:
+The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
+
+Writing markup with JSX 
+The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
+
+JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:
+The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
+
+Writing markup with JSX 
+The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
+
+JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:
+The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
+
+Writing markup with JSX 
+The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
+
+JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:
+    </div>
 
 
     <!-- footer  -->
