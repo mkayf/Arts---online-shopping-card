@@ -5,10 +5,10 @@
                 <img src="/arts-shopping-cart/assets/images/menu-icon.png" alt="">
             </button>
             <ul class="mb-0 nav-link-ul">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="link">Home</a></li>
+                <li><a href="#" class="link">About</a></li>
+                <li><a href="#" class="link">Products</a></li>
+                <li><a href="#" class="link">Contact</a></li>
             </ul>
         </div>
         <div class="nav-logo-div">

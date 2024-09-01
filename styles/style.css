@@ -62,7 +62,7 @@
     --sen-regular: 'Sen-regular';
     --sen-medium: 'Sen-medium';
     --sen-semibold: 'Sen-semibold';
-    --sen-sbold: 'Sen-bold';
+    --sen-bold: 'Sen-bold';
     --space-1: 1px;
     --space-2: 2px;
     --space-3: 3px;
@@ -70,7 +70,6 @@
 
 body{
     background-color: var(--bg-color);
-    /* height: 200vh; */
 }
 
 /* Navbar styling goes here */
@@ -146,15 +145,37 @@ header nav .nav-link-ul{
     padding-left: 0 !important;
 }
 
-header nav .nav-links-div ul li{
+header nav .nav-link-ul li{
     list-style: none;
     margin: 0 16px;
+    font-family: var(--sen-regular);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    position: relative;
 }
 
-header nav .nav-links-div ul li a{
-    text-decoration: none    ;
-    color: white;
+header nav .nav-link-ul li::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    top: 28px;
+    left: 0;
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
 }
+
+header nav .nav-link-ul li:hover::before{
+    width: 100%;
+}
+
+header nav .nav-link-ul li .link{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
 
 header nav .nav-logo-div{
     padding-right: 16px;
@@ -181,7 +202,6 @@ header .offcanvas{
 }
 
 header .offcanvas-links{
-    /* border: 2px solid red; */
     padding-left: 0 !important;
     display: flex;
     justify-content: center;
@@ -192,6 +212,7 @@ header .offcanvas-links{
 
 header .offcanvas-links li{
     list-style: none;
+    font-family: var(--sen-medium);
     font-size: 1.6rem;
 }
 
