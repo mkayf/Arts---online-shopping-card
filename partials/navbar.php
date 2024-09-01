@@ -16,17 +16,16 @@
         </div>
         <div class="nav-icons-div">
             <!-- Search icon -->
-            <img src="/Arts-(E_project)/arts-online-shopping-cart/assets/images/search-btn.png" alt="search icon">
+            <img src="/arts-shopping-cart/assets/images/search-btn.png" alt="search icon">
             <!-- user icon -->
-            <img src="/Arts-(E_project)/arts-online-shopping-cart/assets/images/user-btn.png" alt="user icon">
+            <img src="/arts-shopping-cart/assets/images/user-btn.png" alt="user icon">
             <!-- cart-item-icon -->
-            <img src="/Arts-(E_project)/arts-online-shopping-cart/assets/images/cart-item-btn.png" alt="cart items icon">
+            <img src="/arts-shopping-cart/assets/images/cart-item-btn.png" alt="cart items icon">
         </div>
     </nav>
     <!-- Offcanvas for responsive screens -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
-    <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">ARTS</h5> -->
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
