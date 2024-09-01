@@ -16,11 +16,11 @@
         </div>
         <div class="nav-icons-div">
             <!-- Search icon -->
-            <img src="/Arts-(E_project)/arts-online-shopping-cart/assets/images/search-btn.png" alt="search icon">
+            <img src="/arts-online-shopping-cart/assets/images/search-btn.png" alt="search icon">
             <!-- user icon -->
-            <img src="/Arts-(E_project)/arts-online-shopping-cart/assets/images/user-btn.png" alt="user icon">
+            <img src="/arts-online-shopping-cart/assets/images/user-btn.png" alt="user icon">
             <!-- cart-item-icon -->
-            <img src="/Arts-(E_project)/arts-online-shopping-cart/assets/images/cart-item-btn.png" alt="cart items icon">
+            <img src="/arts-online-shopping-cart/assets/images/cart-item-btn.png" alt="cart items icon">
         </div>
     </nav>
     <!-- Offcanvas for responsive screens -->
