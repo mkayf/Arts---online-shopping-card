@@ -5,10 +5,10 @@
                 <img src="/arts-shopping-cart/assets/images/menu-icon.png" alt="">
             </button>
             <ul class="mb-0 nav-link-ul">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="link">Home</a></li>
+                <li><a href="#" class="link">About</a></li>
+                <li><a href="#" class="link">Products</a></li>
+                <li><a href="#" class="link">Contact</a></li>
             </ul>
         </div>
         <div class="nav-logo-div">
@@ -26,7 +26,6 @@
     <!-- Offcanvas for responsive screens -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
-    <!-- <h5 class="offcanvas-title" id="offcanvasExampleLabel">ARTS</h5> -->
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">

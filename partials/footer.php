@@ -41,13 +41,13 @@
                     <div class="footer-line"></div>
                     <div class="footer-copyright-content">
                     <div class="copyright-para">
-                    <p>Copyright &copy; All right reserved |This website is made by <i class="fa-regular fa-heart"></i> KAIF/A.SAMAD</p>
+                    <p>Copyright &copy; All right reserved |This website is made by <i class="fa-regular fa-heart"></i> KAIF/A.SAMAD/KHANZADA/ABEER</p>
                     </div>
                     <div class="footer-payment-methods">
-                       <img src="/Arts-online-shopping-cart/assets/images/footercredit-card.png" alt="" class="footer-img-1">
-                       <img src="/Arts-online-shopping-cart/assets/images/footer-cheque.png" alt="" class="footer-img-2">
-                       <img src="/Arts-online-shopping-cart/assets/images/footer-demand-draft.jpg" alt="" class="footer-img-3">
-                       <img src="/Arts-online-shopping-cart/assets/images/footer-cash-on-delivary.png" alt="" class="footer-img-4">
+                       <img src="/arts-online-shopping-cart/assets/images/footercredit-card.png" alt="" class="footer-img-1">
+                       <img src="/arts-online-shopping-cart/assets/images/footer-cheque.png" alt="" class="footer-img-2">
+                       <img src="/arts-online-shopping-cart/assets/images/footer-demand-draft.jpg" alt="" class="footer-img-3">
+                       <img src="/arts-online-shopping-cart/assets/images/footer-cash-on-delivary.png" alt="" class="footer-img-4">
                     </div>
                 </div>
                 </div>
