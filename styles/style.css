@@ -89,7 +89,7 @@ header .sticky{
     position: fixed;
     left:  0;
     top: 0;
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     -webkit-transition: all 15ms ease-in-out;
     -moz-transition: all 15ms ease-in-out;
     -o-transition: all 15ms ease-in-out;
@@ -100,9 +100,9 @@ header .sticky{
     animation-duration: 0.5s;
     -webkit-animation-fill-mode: both ;
     animation-fill-mode: both;
-    -webkit-box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
-    -moz-box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
-    box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
+    -webkit-box-shadow: 0 2px 3px rgba(83, 83, 83, 0.1);
+    -moz-box-shadow: 0 2px 3px rgba(83, 83, 83, 0.1);
+    box-shadow: 0 2px 3px rgba(83, 83, 83, 0.1);
 }
 
 @keyframes stickyAnimation {

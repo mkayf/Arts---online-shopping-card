@@ -10,49 +10,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- Hero section css -->
+     <link rel="stylesheet" href="./styles/hero-section.css">
   </head>
   <body>
     <!-- Navbar -->
      <?php include './partials/navbar.php'; ?>
     <!-- Navbar -->
 
-    <div>
-    <p>
-    The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
+    <!-- Hero section -->
+     <section class="hero-section">
+      <img src="./assets/images/carousel-1.png" alt="">
+     </section>
+    <!-- Hero section -->
 
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
-
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
-
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:
-The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
-
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:
-The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
-
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:
-The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
-
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:</p>
-    </div>
 
 
     <!-- footer  -->

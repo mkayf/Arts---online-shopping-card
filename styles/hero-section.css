@@ -1,0 +1,14 @@
+.hero-section {
+    height: 600px;
+    aspect-ratio: 3/2;
+    width: 100%;
+    clip-path: ellipse(90% 100% at 50% 0%);
+    background: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section img{
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.493));
+    /* mix-blend-mode: overlay; */
+}
