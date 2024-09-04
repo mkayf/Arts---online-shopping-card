@@ -2,7 +2,7 @@
     <nav id="navbar">
         <div class="nav-links-div">
             <button class="collapse-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <img src="/arts-shopping-cart/assets/images/menu-icon.png" alt="">
+                <img src="/arts-online-shopping-cart/assets/images/menu-icon.png" alt="">
             </button>
             <ul class="mb-0 nav-link-ul">
                 <li><a href="#" class="link">Home</a></li>

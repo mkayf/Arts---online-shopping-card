@@ -20,9 +20,36 @@
 
     <!-- Hero section -->
      <section class="hero-section">
-      <img src="./assets/images/carousel-1.png" alt="">
+      <!-- carousel -->
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div class="carousel-indicators" data-bs-pause="false" data-bs-ride="carousel">
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <div class="c-content-div">
+        <h1>Your One-Stop Shop for Arts, Gifts, and More</h1>
+        <p>Explore our carefully curated collection of unique gifts, arts, and accessories. Shop with ease and have your favorites delivered right to your door.</p>
+        <a href="#" class="gold-btn">Shop now</a>
+      </div>
+      <div class="c-img-div">
+        <img src="./assets/images/hero-img-1.png" alt="" width="500px">
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000"></div>
+  </div>
+</div>
+      <!-- carousel -->
      </section>
     <!-- Hero section -->
+
+  <main style="height: 100vh;">
+
+  </main>
 
 
 
