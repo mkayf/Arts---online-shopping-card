@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:   rgba(158, 93, 209, 0.2);
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+.Trending-products-container{
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.trending-products-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:  var(--dancing-regular);
+    margin-top: 5%;
+}
+.card{
+    border-radius: 16px;
+    overflow: hidden;
+    background-color:whitesmoke;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 24px 16px;
+    height: 350px;
+}
+.trending-products-card-title{
+    text-align: center;
+}
+.card img{
+    transition: all ease 0.6s;
+    width: 100%;
+    height:auto;
+    object-fit: cover;;
+}
+.card img:hover{
+    transform: scale(1.5);
+}
+.trending-cards-rating{
+    text-align: center;
+    color: goldenrod;
+}
+.trending-cards-rupees{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trending-cards-rupees span{
+    font-size: 20px;
+}
+.trending-cards-cart{
+    transform: translateX(120px);
+    font-size: 16px;
+    opacity: 0;
+    transition: all ease-in-out 0.6s, transform 1.5s ease;
+    position: relative;
+    left: 5px;
+}
+.card:hover .trending-cards-cart{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Trending-products-Responsive  */
+
+@media (max-width: 960px){
+    .card{
+        height: 400px;
+        width: 350px !important;
+    }   
+}
+@media (max-width: 760px){
+    .card{
+        height: 520px;
+        width: 500px !important;
+    }       
+    .trending-products-card-title{
+        font-size: 30px;
+    }
+    .trending-cards-rupees{
+        font-size: 20px;
+    }
+    .trending-cards-rupees span{
+        font-size: 25px;
+    }
+    .trending-cards-cart{
+        font-size: 20px;
+    }   
+}
+@media (max-width: 520px){
+    .card{
+        height: 400px;
+        width: 350px !important;
+    }      
+}
+@media (max-width: 370px){
+    .card{
+        height: 380px;
+        width: 300px !important;
+    }      
+}
