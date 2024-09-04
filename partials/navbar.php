@@ -2,7 +2,7 @@
     <nav id="navbar">
         <div class="nav-links-div">
             <button class="collapse-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <img src="/arts-shopping-cart/assets/images/menu-icon.png" alt="">
+                <img src="/arts-online-shopping-cart/assets/images/menu-icon.png" alt="">
             </button>
             <ul class="mb-0 nav-link-ul">
                 <li><a href="#" class="link">Home</a></li>
@@ -16,11 +16,11 @@
         </div>
         <div class="nav-icons-div">
             <!-- Search icon -->
-            <img src="/arts-shopping-cart/assets/images/search-btn.png" alt="search icon">
+            <img src="/arts-online-shopping-cart/assets/images/search-btn.png" alt="search icon" class="nav-icons">
             <!-- user icon -->
-            <img src="/arts-shopping-cart/assets/images/user-btn.png" alt="user icon">
+            <img src="/arts-online-shopping-cart/assets/images/user-btn.png" alt="user icon" class="nav-icons">
             <!-- cart-item-icon -->
-            <img src="/arts-shopping-cart/assets/images/cart-item-btn.png" alt="cart items icon">
+            <img src="/arts-online-shopping-cart/assets/images/cart-item-btn.png" alt="cart items icon" class="nav-icons">
         </div>
     </nav>
     <!-- Offcanvas for responsive screens -->

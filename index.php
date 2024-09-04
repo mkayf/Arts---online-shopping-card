@@ -1,69 +1,248 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arts - Your One-Stop Shop for Arts, Gifts, and More!</title>
     <!-- Bootstrap Link CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./styles/style.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="./styles/home-style.css">
+    <!-- Hero section css -->
+    <link rel="stylesheet" href="./styles/hero-section.css">
+</head>
+
+<body>
     <!-- Navbar -->
-     <?php include './partials/navbar.php'; ?>
+    <?php include './partials/navbar.php'; ?>
     <!-- Navbar -->
 
-    <div>
-    <p>
-    The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
+    <main>
+        <section class="hero-section">
+            <!-- carousel -->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-indicators" data-bs-pause="false" data-bs-ride="carousel">
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <div class="c-content-div">
+                            <h1>Your One-Stop Shop for Arts, Gifts, and More</h1>
+                            <p>Explore our carefully curated collection of unique gifts, arts, and accessories. Shop
+                                with ease and have your favorites delivered right to your door.</p>
+                            <a href="#" class="gold-btn">Shop now</a>
+                        </div>
+                        <div class="c-img-div">
+                            <img src="./assets/images/hero-img-1.png" alt="" width="500px">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000"></div>
+                </div>
+            </div>
+            <!-- carousel -->
+        </section>
 
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
+        <!-- Top trending products  -->
+        <section class="Trending-products my-5">
+            <div class="trending-products-heading my-4">
+                <h1>Top Trending Products</h1>
+            </div>
+            <div class="Trending-products-container">
+                <div class="row">
+                    <!-- card-1  -->
+                    <div class="card " style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="trending-products-card-title">Card title</h5>
+                            <div class="trending-cards-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="trending-cards-rupees">
+                                <label for="">PKR <span>2000</span></label>
+                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-2  -->
+                    <div class="card " style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="trending-products-card-title">Card title</h5>
+                            <div class="trending-cards-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="trending-cards-rupees">
+                                <label for="">PKR <span>2000</span></label>
+                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-3  -->
+                    <div class="card " style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="trending-products-card-title">Card title</h5>
+                            <div class="trending-cards-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="trending-cards-rupees">
+                                <label for="">PKR <span>2000</span></label>
+                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-4    -->
+                    <div class="card " style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="trending-products-card-title">Card title</h5>
+                            <div class="trending-cards-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="trending-cards-rupees">
+                                <label for="">PKR <span>2000</span></label>
+                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-5    -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="trending-products-card-title">Card title</h5>
+                            <div class="trending-cards-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="trending-cards-rupees">
+                                <label for="">PKR <span>2000</span></label>
+                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-6  -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="trending-products-card-title">Card title</h5>
+                            <div class="trending-cards-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="trending-cards-rupees">
+                                <label for="">PKR <span>2000</span></label>
+                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-7   -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="trending-products-card-title">Card title</h5>
+                            <div class="trending-cards-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="trending-cards-rupees">
+                                <label for="">PKR <span>2000</span></label>
+                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-8  -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="trending-products-card-title">Card title</h5>
+                            <div class="trending-cards-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="trending-cards-rupees">
+                                <label for="">PKR <span>2000</span></label>
+                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--row-div-->
+            </div> <!-- container-div -->
+        </section>
 
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
+    </main>
 
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
-
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:
-The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
-
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:
-The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
-
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:
-The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.
-
-Writing markup with JSX 
-The markup syntax you\'ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
-
-JSX is stricter than HTML. You have to close tags like <br />. Your component also can\'t return multiple JSX tags. You have to wrap them into a shared parent, wrapper:</p>
-    </div>
 
 
     <!-- footer  -->
-      <?php include './partials/footer.php'?>
+    <?php include './partials/footer.php'?>
     <!-- footer  -->
 
 
 
     <!-- Boostrap Script CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
     <!-- Vanilla JS -->
     <script src="./scripts/script.js"></script>
-  </body>
+</body>
+
 </html>
