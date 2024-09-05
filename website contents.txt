@@ -5,10 +5,10 @@ Font family: Aeonik
 1. Home Page:
     # Navbar: Home, Products, About, Contact, Search Input, login, signup and user dashboard.
     # Hero Section
-    # New Arrivals,
-    # Shop by category,
+    # Top Trending Products,
     # Promotion banner,
+    # Shop by category,
     # Testimonials
-    # Newsletter subscription
+    # Feedback
     # Footer
 

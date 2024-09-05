@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let navIcons = document.getElementsByClassName('nav-icons');
     let logo = document.getElementsByClassName('nav-logo-div')[0];
     let collapseBtn = document.getElementsByClassName('collapse-btn')[0];
+    // Animate the navbar on scroll
     const changeValueOnScroll = () => {
         const scrollValue = document?.documentElement?.scrollTop;
         scrollValue > 100 ? navAnimate = true : navAnimate = false;
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.style.filter = 'invert(0)';
             })
             logo.style.color = 'black';
-            collapseBtn.style.filter = 'invert(0)';
+            collapseBtn.style.filter = 'invert(1)';
         }
         else{
             document.getElementById('navbar').classList.remove('sticky');
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.style.filter = 'invert(1)';
             })
             logo.style.color = 'white';
-            collapseBtn.style.filter = 'invert(1)';
+            collapseBtn.style.filter = 'invert(0)';
         }
     }
 
