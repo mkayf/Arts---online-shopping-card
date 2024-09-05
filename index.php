@@ -63,7 +63,7 @@
             <div class="Trending-products-container">
                 <div class="row">
                     <!-- card-1  -->
-                    <div class="card " style="width: 18rem;">
+                    <div class="card" style="width: 18rem;">
                         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
                             class="card-img-top" alt="...">
                         <div class="card-body">
@@ -226,6 +226,22 @@
                 <!--row-div-->
             </div> <!-- container-div -->
         </section>
+
+        <!-- Free delivery section -->
+         <section class="free-delivery-section container my-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="f-delivery-content col col-12 col-md-6 col-lg-6">
+                    <h2>Free Delivery!</h2>
+                    <h1>On Orders Over Rs.2,000</h1>
+                    <p>Enjoy the convenience of free delivery on orders above Rs.2,000</p>
+                    <a href="#" class="gold-btn">Shop now</a>
+                </div>
+                <div class="f-delivery-img col col-12 col-md-6 col-lg-6">
+                    <img src="./assets/images/free-delivery-1.svg" alt="">
+                </div>
+            </div>
+         </section>
+        <!-- Free delivery section -->
 
     </main>
 
