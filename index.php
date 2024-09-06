@@ -41,7 +41,7 @@
                             <h1>Your One-Stop Shop for Arts, Gifts, and More</h1>
                             <p>Explore our carefully curated collection of unique gifts, arts, and accessories. Shop
                                 with ease and have your favorites delivered right to your door.</p>
-                            <a href="#" class="gold-btn">Shop now</a>
+                            <a href="#" class="purple-btn">Shop now</a>
                         </div>
                         <div class="c-img-div">
                             <img src="./assets/images/hero-img-1.png" alt="" width="500px">
@@ -56,7 +56,7 @@
         </section>
 
         <!-- Top trending products  -->
-        <section class="Trending-products my-5">
+        <section class="Trending-products">
             <div class="trending-products-heading my-4">
                 <h1>Top Trending Products</h1>
             </div>
@@ -228,13 +228,13 @@
         </section>
 
         <!-- Free delivery section -->
-         <section class="free-delivery-section container my-5">
+         <section class="free-delivery-section container">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="f-delivery-content col col-12 col-md-6 col-lg-6">
                     <h2>Free Delivery!</h2>
                     <h1>On Orders Over Rs.2,000</h1>
                     <p>Enjoy the convenience of free delivery on orders above Rs.2,000</p>
-                    <a href="#" class="gold-btn">Shop now</a>
+                    <a href="#" class="purple-btn">Shop now</a>
                 </div>
                 <div class="f-delivery-img col col-12 col-md-6 col-lg-6">
                     <img src="./assets/images/free-delivery-1.svg" alt="">
@@ -242,6 +242,42 @@
             </div>
          </section>
         <!-- Free delivery section -->
+
+        <!-- Shop by categories section -->
+         <section class="product-categories-section">
+            <h1 class="my-5 text-center">Shop by categories</h1>
+            <div class="c-column-container">
+                <div class="c-column-1 c-column">
+                    <h5>Make Everyone Happy</h5>
+                    <h2>Gift Articles</h2>
+                </div>
+                <div class="c-column-2 c-column">
+                    <h5>Best Wishes Always</h5>
+                    <h2>Greeting Cards</h2>
+                </div>
+                <div class="c-column-3 c-column">
+                    <h5>Talking Toy Delight</h5>
+                    <h2>Dolls</h2>
+                </div>
+                <div class="c-column-4 c-column">
+                    <h5>Files Made Simple</h5>
+                    <h2>Files</h2>
+                </div>
+                <div class="c-column-5 c-column">
+                    <h5>Trendy & Durable</h5>
+                    <h2>HandBags</h2>
+                </div>
+                <div class="c-column-6 c-column">
+                    <h5>Stylish Wallet Choice</h5>
+                    <h2>Wallets</h2>
+                </div>
+                <div class="c-column-7 c-column">
+                    <h5>Glamour & Glow</h5>
+                    <h2>Beauty Products</h2>
+                </div>
+            </div>
+         </section>
+        <!-- Shop by categories section -->
 
     </main>
 
