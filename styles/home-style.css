@@ -271,7 +271,8 @@ header .offcanvas-links li a{
     /* aspect-ratio: 3/2; */
     width: 100%;
     clip-path: ellipse(90% 100% at 50% 0%);
-    background: linear-gradient(85.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
+    /* background: linear-gradient(85.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%); */
+    background: #694da1 ;
     position: relative;
 }
 
@@ -494,7 +495,8 @@ header .offcanvas-links li a{
 
 /* Free delivery section styling */
 .free-delivery-section{
-    background: linear-gradient(82deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
+    /* background: linear-gradient(82deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%); */
+    background: #694da1;
     border-radius: 28px;
     padding: 32px;
     overflow: hidden;
