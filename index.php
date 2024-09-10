@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Arts - Your One-Stop Shop for Arts, Gifts, and More!</title>
+    <title>Arts - Your One-Stop Shop for Stationeries, Gifts, and More!</title>
     <!-- Bootstrap Link CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -14,8 +14,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles/home-style.css">
-    <!-- Hero section css -->
-    <link rel="stylesheet" href="./styles/hero-section.css">
 </head>
 
 <body>
@@ -38,7 +36,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="2000">
                         <div class="c-content-div">
-                            <h1>Your One-Stop Shop for Arts, Gifts, and More</h1>
+                            <h1>Your One-Stop Shop for Stationery, Gifts, and More</h1>
                             <p>Explore our carefully curated collection of unique gifts, arts, and accessories. Shop
                                 with ease and have your favorites delivered right to your door.</p>
                             <a href="#" class="purple-btn">Shop now</a>
@@ -67,18 +65,24 @@
                         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="trending-products-card-title">Card title</h5>
-                            <div class="trending-cards-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                            <div class="card-top-content">
+                                <h5 class="trending-products-card-title">Card title good point here it is now</h5>
                             </div>
-                            <div class="trending-cards-rupees">
+                            <div class="card-middle-content">
                                 <label for="">PKR <span>2000</span></label>
-                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                                <div class="trending-cards-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="card-bottom-content">
+                                <button class="product-cart-btn">
+                                    <i class="fa-solid fa-cart-shopping     trending-cards-cart"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -228,7 +232,7 @@
         </section>
 
         <!-- Free delivery section -->
-         <section class="free-delivery-section container">
+        <section class="free-delivery-section container">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="f-delivery-content col col-12 col-md-6 col-lg-6">
                     <h2>Free Delivery!</h2>
@@ -240,11 +244,11 @@
                     <img src="./assets/images/free-delivery-1.svg" alt="">
                 </div>
             </div>
-         </section>
+        </section>
         <!-- Free delivery section -->
 
         <!-- Shop by categories section -->
-         <section class="product-categories-section">
+        <section class="product-categories-section">
             <h1 class="my-5 text-center">Shop by categories</h1>
             <div class="c-column-container">
                 <div class="c-column-1 c-column">
@@ -276,7 +280,7 @@
                     <h2>Beauty Products</h2>
                 </div>
             </div>
-         </section>
+        </section>
         <!-- Shop by categories section -->
 
     </main>

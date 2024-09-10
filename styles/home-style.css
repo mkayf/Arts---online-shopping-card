@@ -68,7 +68,7 @@
     --space-1: 1px;
     --space-2: 2px;
     --space-3: 3px;
-    --top-spacing: 80px;
+    --top-spacing: 100px;
 }
 
 /* shop button pre styled */
@@ -82,6 +82,10 @@
     border-radius: 10px;
     font-family: var(--sen-regular);
     transition: all 0.3s ease-in-out;
+}
+
+.purple-btn:active{
+    transform: scale(0.95);
 }
 
 .purple-btn:hover{
@@ -382,8 +386,14 @@ header .offcanvas-links li a{
 }
 
 /* Trending products section */
+
 .Trending-products{
     margin-top: var(--top-spacing);
+}
+.trending-products-heading h1{
+    font-size: 3rem;
+    font-family: var(--sen-bold);
+    text-align: center;
 }
 .Trending-products-container .row{
     display: flex;
@@ -399,60 +409,70 @@ header .offcanvas-links li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family:  var(--dancing-bold);
-}
-.trending-products-heading h1{
-    font-size: 3rem;
-}
-.card-img-top{
-    height: 350px;
 }
 .card{
     border-radius: 16px;
     overflow: hidden;
     background-color:whitesmoke;
     box-sizing: border-box;
-    padding: 0;
+    padding: 16px;
     margin: 24px 16px;
     height: 350px;
 }
-.trending-products-card-title{
-    text-align: center;
+.card-img-top{
+    height: 350px;
+    /* border: 2px solid blue; */
 }
+
 .card img{
     transition: all ease 0.6s;
     width: 100%;
     height:auto;
     object-fit: cover;
+    border-radius: 8px;
 }
 .card img:hover{
     transform: scale(1.5);
 }
-.trending-cards-rating{
-    text-align: center;
-    color: goldenrod;
-}
-.trending-cards-rupees{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.trending-cards-rupees span{
-    font-size: 20px;
-}
-.trending-cards-cart{
-    transform: translateX(120px);
-    font-size: 16px;
-    opacity: 0;
-    transition: all ease-in-out 0.6s, transform 1.5s ease;
-    position: relative;
-    left: 5px;
-}
-.card:hover .trending-cards-cart{
-    opacity: 1;
-    transform: translateX(0);
+.card-body{
+    /* border: 2px solid red; */
+    font-family: var(--sen-regular);
+    padding: 16px 12px 0 12px
 }
 
+.card-body .card-top-content h5{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-body .card-middle-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+
+.trending-cards-rating{
+    color: goldenrod;
+    font-size: 0.8rem;
+}
+
+.product-cart-btn{
+    margin-top: 12px;
+    border: none;
+    background-color: var(--button-color);
+    width: 55px;
+    height: 40px;
+    color: whitesmoke;
+    border-radius: 36px;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+.card:hover .product-cart-btn{
+    opacity: 1;
+    transform: translateY(0px);
+}
 /* Trending-products-Responsive  */
 
 @media (max-width: 960px){
@@ -468,15 +488,6 @@ header .offcanvas-links li a{
     }       
     .trending-products-card-title{
         font-size: 30px;
-    }
-    .trending-cards-rupees{
-        font-size: 20px;
-    }
-    .trending-cards-rupees span{
-        font-size: 25px;
-    }
-    .trending-cards-cart{
-        font-size: 20px;
     }   
 }
 @media (max-width: 520px){
@@ -607,10 +618,20 @@ header .offcanvas-links li a{
     height: 300px;
     width: 100%;
     border-radius: 24px;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     padding: 24px;
     color: #444444;
     font-family: var(--sen-semibold);
+    cursor: pointer;
+}
+
+.c-column:active{
+    transform: scale(0.99);
+}
+
+.c-column:hover{
+    box-shadow: 0 0 7px 5px rgba(158, 93, 209, 0.2);
+
 }
 
 .c-column h5{
@@ -764,6 +785,10 @@ header .offcanvas-links li a{
     .c-column-1 {
         grid-column: span 2 / span 2;
     }
+
+    .c-column-1 h2{
+        font-size: 2.5rem;
+    }
     
     .c-column-2 {
         grid-column: span 2 / span 2;
@@ -798,17 +823,25 @@ header .offcanvas-links li a{
 }
 
 @media (max-width: 576px){
+    .product-categories-section{
+        padding: 0 16px;
+    }
+    .product-categories-section h1{
+        font-size: 2rem;
+    }
     .product-categories-section .c-column-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(7, 1fr);
-        padding: 16px;
     }
     .c-column{
         grid-column-start: auto;
   grid-column-end: auto;
   grid-row-start: auto;
   grid-row-end: auto;
+    }
+    .c-column-7 h2{
+        font-size: 2.5rem;
     }
 }
 
