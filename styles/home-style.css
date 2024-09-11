@@ -203,8 +203,13 @@ header nav .nav-link-ul li .link{
 
 
 header nav .nav-logo-div{
-    padding-right: 16px;
+    padding-right: 0;
     color: white;
+}
+
+header nav .nav-logo-div img{
+    /* width: 130px; */
+    height: 60px;
 }
 
 header nav .nav-links-div{
@@ -413,6 +418,7 @@ header .offcanvas-links li a{
 .card{
     border-radius: 16px;
     overflow: hidden;
+    position: relative;
     background-color:whitesmoke;
     box-sizing: border-box;
     padding: 16px;
@@ -421,19 +427,20 @@ header .offcanvas-links li a{
 }
 .card-img-top{
     height: 350px;
-    /* border: 2px solid blue; */
+    position: relative;
+    overflow: hidden;
 }
 
 .card img{
-    transition: all ease 0.6s;
     width: 100%;
     height:auto;
     object-fit: cover;
     border-radius: 8px;
+    transition: all ease 0.6s;
 }
-.card img:hover{
+/* .card img:hover{
     transform: scale(1.5);
-}
+} */
 .card-body{
     /* border: 2px solid red; */
     font-family: var(--sen-regular);

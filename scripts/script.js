@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let navAnimate = false;
     let navLinks = document.getElementsByClassName('link');
     let navIcons = document.getElementsByClassName('nav-icons');
-    let logo = document.getElementsByClassName('nav-logo-div')[0];
+    let logo = document.getElementById('logo');
     let collapseBtn = document.getElementsByClassName('collapse-btn')[0];
     // Animate the navbar on scroll
     const changeValueOnScroll = () => {
@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
             Array.from(navIcons).forEach((icon) => {
                 icon.style.filter = 'invert(0)';
             })
-            logo.style.color = 'black';
+            logo.style.filter = 'invert(1)';
+            console.log(logo);
             collapseBtn.style.filter = 'invert(1)';
         }
         else{
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Array.from(navIcons).forEach((icon) => {
                 icon.style.filter = 'invert(1)';
             })
-            logo.style.color = 'white';
+            logo.style.filter = 'invert(0)';
             collapseBtn.style.filter = 'invert(0)';
         }
     }

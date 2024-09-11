@@ -4,8 +4,9 @@
             <div class="footer-container">
                 <div class="footer-content-1">
                     <div class="footer-heading-1">
-                        <!-- <img src="" alt=""> -->
-                        <h4>ARTS</h4> 
+                    <a href="/arts-online-shopping-cart/index.php">
+                        <img src="/arts-online-shopping-cart/assets/images/logo1.png" alt="Logo" height="">
+                    </a>
                     </div>
                     <ul>
                         <li><i class="fa-solid fa-location-dot"></i>Boltan market karachi</li>

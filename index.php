@@ -66,7 +66,7 @@
                             class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="card-top-content">
-                                <h5 class="trending-products-card-title">Card title good point here it is now</h5>
+                                <h5 class="trending-products-card-title">Gift set for birthdays</h5>
                             </div>
                             <div class="card-middle-content">
                                 <label for="">PKR <span>2000</span></label>
@@ -86,146 +86,196 @@
                             </div>
                         </div>
                     </div>
-                    <!-- card-2  -->
-                    <div class="card " style="width: 18rem;">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="trending-products-card-title">Card title</h5>
-                            <div class="trending-cards-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="trending-cards-rupees">
-                                <label for="">PKR <span>2000</span></label>
-                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- card-3  -->
-                    <div class="card " style="width: 18rem;">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="trending-products-card-title">Card title</h5>
-                            <div class="trending-cards-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="trending-cards-rupees">
-                                <label for="">PKR <span>2000</span></label>
-                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- card-4    -->
-                    <div class="card " style="width: 18rem;">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="trending-products-card-title">Card title</h5>
-                            <div class="trending-cards-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="trending-cards-rupees">
-                                <label for="">PKR <span>2000</span></label>
-                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- card-5    -->
+
+                    <!-- card-1  -->
                     <div class="card" style="width: 18rem;">
                         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="trending-products-card-title">Card title</h5>
-                            <div class="trending-cards-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                            <div class="card-top-content">
+                                <h5 class="trending-products-card-title">Gift set for birthdays</h5>
                             </div>
-                            <div class="trending-cards-rupees">
+                            <div class="card-middle-content">
                                 <label for="">PKR <span>2000</span></label>
-                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                                <div class="trending-cards-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="card-bottom-content">
+                                <button class="product-cart-btn">
+                                    <i class="fa-solid fa-cart-shopping     trending-cards-cart"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <!-- card-6  -->
+
+                    <!-- card-1  -->
                     <div class="card" style="width: 18rem;">
                         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="trending-products-card-title">Card title</h5>
-                            <div class="trending-cards-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                            <div class="card-top-content">
+                                <h5 class="trending-products-card-title">Gift set for birthdays</h5>
                             </div>
-                            <div class="trending-cards-rupees">
+                            <div class="card-middle-content">
                                 <label for="">PKR <span>2000</span></label>
-                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                                <div class="trending-cards-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="card-bottom-content">
+                                <button class="product-cart-btn">
+                                    <i class="fa-solid fa-cart-shopping     trending-cards-cart"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <!-- card-7   -->
+
+                    <!-- card-1  -->
                     <div class="card" style="width: 18rem;">
                         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="trending-products-card-title">Card title</h5>
-                            <div class="trending-cards-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                            <div class="card-top-content">
+                                <h5 class="trending-products-card-title">Gift set for birthdays</h5>
                             </div>
-                            <div class="trending-cards-rupees">
+                            <div class="card-middle-content">
                                 <label for="">PKR <span>2000</span></label>
-                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                                <div class="trending-cards-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="card-bottom-content">
+                                <button class="product-cart-btn">
+                                    <i class="fa-solid fa-cart-shopping     trending-cards-cart"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <!-- card-8  -->
+
+                    <!-- card-1  -->
                     <div class="card" style="width: 18rem;">
                         <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="trending-products-card-title">Card title</h5>
-                            <div class="trending-cards-rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                            <div class="card-top-content">
+                                <h5 class="trending-products-card-title">Gift set for birthdays</h5>
                             </div>
-                            <div class="trending-cards-rupees">
+                            <div class="card-middle-content">
                                 <label for="">PKR <span>2000</span></label>
-                                <i class="fa-solid fa-cart-shopping trending-cards-cart"></i>
+                                <div class="trending-cards-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="card-bottom-content">
+                                <button class="product-cart-btn">
+                                    <i class="fa-solid fa-cart-shopping     trending-cards-cart"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
+
+                    <!-- card-1  -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-top-content">
+                                <h5 class="trending-products-card-title">Gift set for birthdays</h5>
+                            </div>
+                            <div class="card-middle-content">
+                                <label for="">PKR <span>2000</span></label>
+                                <div class="trending-cards-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="card-bottom-content">
+                                <button class="product-cart-btn">
+                                    <i class="fa-solid fa-cart-shopping     trending-cards-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-1  -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-top-content">
+                                <h5 class="trending-products-card-title">Gift set for birthdays</h5>
+                            </div>
+                            <div class="card-middle-content">
+                                <label for="">PKR <span>2000</span></label>
+                                <div class="trending-cards-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="card-bottom-content">
+                                <button class="product-cart-btn">
+                                    <i class="fa-solid fa-cart-shopping     trending-cards-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-1  -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-top-content">
+                                <h5 class="trending-products-card-title">Gift set for birthdays</h5>
+                            </div>
+                            <div class="card-middle-content">
+                                <label for="">PKR <span>2000</span></label>
+                                <div class="trending-cards-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="card-bottom-content">
+                                <button class="product-cart-btn">
+                                    <i class="fa-solid fa-cart-shopping     trending-cards-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 <!--row-div-->
             </div> <!-- container-div -->
@@ -291,14 +341,31 @@
     <?php include './partials/footer.php'?>
     <!-- footer  -->
 
-
+    <!-- Popper JS before Bootstrap bundles -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
     <!-- Boostrap Script CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+    
     <!-- Vanilla JS -->
     <script src="./scripts/script.js"></script>
+
+    <!-- Popover for login, signup and user dashboard links -->
+    <script>
+    
+
+
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+    // const popover = new bootstrap.Popover('.popover-dismiss', {
+    //  trigger: 'focus',
+    //  html : true,
+    // })
+    </script>
 </body>
 
 </html>
