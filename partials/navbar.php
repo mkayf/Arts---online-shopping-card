@@ -9,7 +9,7 @@
                 <li><a href="/arts-online-shopping-cart/index.php" class="link">Home</a></li>
                 <li><a href="#" class="link">About</a></li>
                 <li><a href="#" class="link">Products</a></li>
-                <li><a href="#" class="link">Contact</a></li>
+                <li><a href="/arts-online-shopping-cart/contact-page.html" class="link">Contact us</a></li>
             </ul>
         </div>
         <div class="nav-logo-div">

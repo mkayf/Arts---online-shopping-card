@@ -333,6 +333,34 @@
         </section>
         <!-- Shop by categories section -->
 
+        <!-- Feedback-form  -->
+        <section class="feedback-form">
+            <div class="feedback-container">
+                <div class="feedback-img">
+                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/feedback-form-illustration-download-in-svg-png-gif-file-formats--online-survey-checklist-questionnaire-pack-business-illustrations-5735134.png" alt="">
+                </div>
+                    <form>
+                    <h4>We Value Your Insights Share Your Feedback to Help Us Improve .</h4>
+                    <div class="mb-3 form-input" >
+                        <label for="exampleInputEmail1" class="form-label">Full name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+                      </div>
+                    <div class="mb-3 form-input">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Email address">
+                    </div>
+                    <div class="mb-4 form-input">
+                        <label for="exampleInputEmail1" class="form-label">Share your thoughts</label>
+                       <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                     </div>
+                    <button type="submit" class="btn btn-primary form-input">Submit</button>
+                  </form>
+            </div>
+         </section>
+         <!-- Feedback form -->
+
+
+
     </main>
 
 
