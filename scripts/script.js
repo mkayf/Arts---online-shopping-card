@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.style.filter = 'invert(0)';
             })
             logo.style.filter = 'invert(1)';
-            console.log(logo);
+            // console.log(logo);
             collapseBtn.style.filter = 'invert(1)';
         }
         else{

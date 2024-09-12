@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arts - Your One-Stop Shop for Stationeries, Gifts, and More!</title>
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <!-- Bootstrap Link CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -17,6 +19,14 @@
 </head>
 
 <body>
+
+    <!-- Login form here -->
+    <?php include './partials/login-modal.php' ?>
+
+    <!-- Signup form here -->
+    <?php include './partials/signup-modal.php' ?>
+
+
     <!-- Navbar -->
     <?php include './partials/navbar.php'; ?>
     <!-- Navbar -->
@@ -342,12 +352,12 @@
                     <form>
                     <h4>We Value Your Insights Share Your Feedback to Help Us Improve .</h4>
                     <div class="mb-3 form-input" >
-                        <label for="exampleInputEmail1" class="form-label">Full name</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+                        <label for="full-name" class="form-label">Full name</label>
+                        <input type="text" class="form-control" id="full-name" aria-describedby="emailHelp" placeholder="Enter your name">
                       </div>
                     <div class="mb-3 form-input">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Email address">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your Email address">
                     </div>
                     <div class="mb-4 form-input">
                         <label for="exampleInputEmail1" class="form-label">Share your thoughts</label>
@@ -380,20 +390,7 @@
     
     <!-- Vanilla JS -->
     <script src="./scripts/script.js"></script>
-
-    <!-- Popover for login, signup and user dashboard links -->
-    <script>
     
-
-
-    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-
-    // const popover = new bootstrap.Popover('.popover-dismiss', {
-    //  trigger: 'focus',
-    //  html : true,
-    // })
-    </script>
 </body>
 
 </html>

@@ -20,6 +20,7 @@
         <div class="nav-icons-div">
             <!-- Search icon -->
             <img src="/arts-online-shopping-cart/assets/images/search-btn.png" alt="search icon" class="nav-icons">
+
             <!-- user icon -->
 
             <div class="dropdown user-actions">
@@ -28,8 +29,8 @@
             </a>
 
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Login</a></li>
-                <li><a class="dropdown-item" href="#">Signup</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</a></li>
                 <li><a class="dropdown-item" href="#">User Dashboard</a></li>
             </ul>
             </div>
