@@ -1,5 +1,5 @@
 
-<!-- signup-form-php  -->
+<!-- signup-form-php -->
 <?php
   
   include "DB.php";
@@ -10,36 +10,47 @@
 
     $secure_password = password_hash($password,PASSWORD_BCRYPT);
 
-    $insertquery = "INSERT INTO signup(Name,Email,Pasword)VALUES('$name','$email','$secure_password')";
-    $query = mysqli_query($connection,$insertquery);
+    $emailquery = "SELECT * FROM signup WHERE email='$email'";
+    $query1 = mysqli_query($connection,$emailquery);
 
-    if($query){
-      ?>
-      <script>
-        alert("Data Inserted Successfully");
-      </script>
-      <?php
+    $emailcount =mysqli_num_rows($query1);
+
+    if($emailcount>0){
+        ?>
+        <script>
+          alert("email are already exist");
+        </script>
+        <?php
     }
     else{
-      ?>
-      <script>
-        alert("Data Is Not Inserted ");
-      </script>
-      <?php
-    } 
+      $insertquery = "INSERT INTO signup(Name,Email,Pasword)VALUES('$name','$email','$secure_password')";
+      $query2 = mysqli_query($connection,$insertquery);
+
+      if($query2){
+        ?>
+        <script>
+          alert("Data Inserted Successfully");
+        </script>
+        <?php
+      }
+      else{
+        ?>
+        <script>
+          alert("Data Is Not Inserted");
+        </script> 
+        <?php
+      } 
+    
+
+    }
+    
+    
+
+    
   
-  } 
-
-
-
-
-
+  }
+  
 ?> 
-
-
-
-
-
 
 <!-- Signup Modal -->
 <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
