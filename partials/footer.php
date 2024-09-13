@@ -42,7 +42,7 @@
                     <div class="footer-line"></div>
                     <div class="footer-copyright-content">
                     <div class="copyright-para">
-                    <p>Copyright &copy; All right reserved |This website is made by <i class="fa-regular fa-heart"></i> KAIF/A.SAMAD/KHANZADA/ABEER</p>
+                    <p>Copyright &copy; All right reserved | This website is made by <i class="fa-regular fa-heart"></i> KAIF/A.SAMAD/KHANZADA/ABEER</p>
                     </div>
                     <div class="footer-payment-methods">
                        <img src="/arts-online-shopping-cart/assets/images/footercredit-card.png" alt="" class="footer-img-1">
