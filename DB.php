@@ -7,19 +7,11 @@
     $Database = "Arts-Db";
 
     $connection = mysqli_connect($servername,$username,$password,$Database);
-    // if($connection){
-    //     ?>
-    //     <script>
-    //         alert("Database connection is sucessfull");
-    //     </script>
-    //     <?php
-    // }
-    // else{
-    //     ?>
-    //     <script>
-    //         alert("Database connection is erorr");
-    //     </script>
-    //     <?php
-    // }
+    //   if($connection){      
+    //       echo("Database connection is sucessfull");
+    //   }
+    //   else{
+    //       echo("Database connection is erorr");
+    //   }
 
 ?>
