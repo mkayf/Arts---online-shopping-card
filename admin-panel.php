@@ -1,5 +1,5 @@
 <?php
-include './partials/db_connection';
+include './partials/db_connection.php';
 
 // Initially when product is not added
 $product_added = false;
@@ -31,7 +31,7 @@ if (isset($_POST['add-product'])) {
             if (in_array($file_type, $accepted_extensions)) {
                 // Move files to image directory
                 if (move_uploaded_file($_FILES['product-images']['tmp_name'][$i], $target_file_path)) {
-                    $img_path[] = $target_file_path;
+                    $img_path[] = mysqli_real_escape_string($conn, $target_file_path);
                 } else {
                     $upload_error = 'Failed to upload image: ' . $_FILES['product-images']['name'][$i];
                 }
@@ -203,6 +203,7 @@ if (isset($_POST['add-product'])) {
                             <option value="Handbags">Handbags</option>
                             <option value="Wallets">Wallets</option>
                             <option value="Beauty Products">Beauty Products</option>
+                            <option value="Other Products">Other Products</option>
                         </select>
                     </div>
                     <div class="mb-3">

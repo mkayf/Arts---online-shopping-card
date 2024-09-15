@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2024 at 05:07 PM
+-- Generation Time: Sep 16, 2024 at 01:12 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,7 +43,8 @@ INSERT INTO `product_categories` (`category_ID`, `category_name`) VALUES
 (14, 'Files'),
 (15, 'Handbags'),
 (16, 'Wallets'),
-(17, 'Beauty Products');
+(17, 'Beauty Products'),
+(18, 'Other Products');
 
 --
 -- Indexes for dumped tables

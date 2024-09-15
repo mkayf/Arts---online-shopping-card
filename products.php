@@ -1,6 +1,87 @@
 <?php
-    include './partials/db_connection';
-    
+include './partials/db_connection.php';
+
+// Select 4 products from each category and display them to the page
+
+// Array of SQL queries to fetch 4 products of each category
+$array_of_queries = [
+    "SELECT * FROM `products` WHERE product_cat_ID = 11 LIMIT 4",
+    "SELECT * FROM `products` WHERE product_cat_ID = 12 LIMIT 4",
+    "SELECT * FROM `products` WHERE product_cat_ID = 13 LIMIT 4",
+    "SELECT * FROM `products` WHERE product_cat_ID = 14 LIMIT 4",
+    "SELECT * FROM `products` WHERE product_cat_ID = 15 LIMIT 4",
+    "SELECT * FROM `products` WHERE product_cat_ID = 16 LIMIT 4",
+    "SELECT * FROM `products` WHERE product_cat_ID = 17 LIMIT 4",
+    "SELECT * FROM `products` WHERE product_cat_ID = 18 LIMIT 4",
+];
+
+// Array to contain all the fetch data
+$product_array = [
+    11 => [], // Gift articles
+    12 => [], // Greeting cards
+    13 => [], // Dolls
+    14 => [], // Files
+    15 => [], // Handbags
+    16 => [], // Wallets
+    17 => [], // Beauty products
+    18 => [], // Other products
+];
+
+
+
+// Add products to their respective categories
+        
+for ($i = 0; $i < count($array_of_queries); $i++){
+    $result = mysqli_query($conn, $array_of_queries[$i]);
+    if(mysqli_num_rows($result) > 0){
+        while ($row = mysqli_fetch_assoc($result)){   
+            $category_ID = $row['product_cat_ID']; 
+            $product_array[$category_ID][] = $row;
+        }
+    } 
+}
+
+
+// Display 4 product cards of their respective categories
+
+function displayProducts($products){
+    if(empty($products)){
+        echo '<h5 class="text-center my-4 more-products">More products are coming soon...</h5>';
+    } else{
+        foreach($products as $product){
+            echo '
+             <div class="card" style="width: 18rem;">
+                        <img src=" '. $product['product_img_1'] .'"
+                            class="card-img-top" alt="Product image">
+                        <div class="card-body">
+                            <div class="card-top-content">
+                                <h5 class="trending-products-card-title">'. $product['product_name'] .'</h5>
+                            </div>
+                            <div class="card-middle-content">
+                                <label for="">PKR <span> '. $product['product_price'] .'</span></label>
+                                <div class="trending-cards-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="card-bottom-content">
+                               <a href="/arts-online-shopping-cart/product-page.php?product_ID='. $product['product_ID'] .'">
+                                    <button class="view-product-btn">
+                                        View product 
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>   
+            ';
+        }
+    }
+}
+
 
 ?>
 
@@ -42,51 +123,121 @@
 
     <main>
         <div class="products-page-banner banner">
-            <h1>Explore Products</h1>          
+            <h1>Explore Products</h1>
         </div>
 
         <div class="all-products-container">
 
-            <!-- Gift articles section -->
-            <section class="gift-articles-section product-section">
-                <h2>Gift Articles</h2>
-                <div class="gift-articles"></div>
+            <section class="gift-articles-section product-section my-5">
+                <div class="cat-heading mx-5">
+                    <h1>Gift Articles</h1>
+                </div>
+                <div class="gift-articles Trending-products-container">
+                    <div class="row">
+                        <?php displayProducts($product_array[11]); ?>
+                    </div>
+                </div>
+                <div class="view-more-container mx-5">
+                    <?php echo !empty($product_array[11]) ? '<a href="./all-products.php?product_cat_ID=11" class="view-more-btn">View more <i class="fa-solid fa-arrow-right"></i> </a>' : '' ?>
+                </div>
             </section>
 
-             <!-- Greeting cards section -->
-             <section class="greeting-cards-section product-section">
-                <h2>Greeting Cards</h2>
-                <div class="greeting-cards"></div>
+            <section class="greeting-cards-section product-section my-5">
+                <div class="cat-heading mx-5">
+                    <h1>Greeting Cards</h1>
+                </div>
+                <div class="greeting-cards Trending-products-container">
+                    <div class="row">
+                        <?php displayProducts($product_array[12]); ?>
+                    </div>
+                </div>
+                <div class="view-more-container mx-5">
+                    <?php echo !empty($product_array[12]) ? '<a href="./all-products.php?product_cat_ID=12" class="view-more-btn">View more <i class="fa-solid fa-arrow-right"></i> </a>' : '' ?>
+                </div>
             </section>
 
-             <!-- Dolls section -->
-             <section class="dolls-section product-section">
-                <h2>Dolls</h2>
-                <div class="dolls"></div>
+            <section class="dolls-section product-section my-5">
+                <div class="cat-heading mx-5">
+                    <h1>Dolls</h1>
+                </div>
+                <div class="dolls Trending-products-container">
+                    <div class="row">
+                        <?php displayProducts($product_array[13]); ?>
+                    </div>
+                </div>
+                <div class="view-more-container mx-5">
+                    <?php echo !empty($product_array[13]) ? '<a href="./all-products.php?product_cat_ID=13" class="view-more-btn">View more <i class="fa-solid fa-arrow-right"></i> </a>' : '' ?>
+                </div>
             </section>
 
-             <!-- Files section -->
-             <section class="files-section product-section">
-                <h2>Files</h2>
-                <div class="files"></div>
+            <section class="files-section product-section my-5">
+                <div class="cat-heading mx-5">
+                    <h1>Files</h1>
+                </div>
+                <div class="files Trending-products-container">
+                    <div class="row">
+                        <?php displayProducts($product_array[14]); ?>
+                    </div>
+                </div>
+                <div class="view-more-container mx-5">
+                    <?php echo !empty($product_array[14]) ? '<a href="./all-products.php?product_cat_ID=14" class="view-more-btn">View more <i class="fa-solid fa-arrow-right"></i> </a>' : '' ?>
+                </div>
             </section>
 
-             <!-- Handbags section -->
-             <section class="handbags-section product-section">
-                <h2>Handbags</h2>
-                <div class="handbags"></div>
+            <section class="handbags-section product-section my-5">
+                <div class="cat-heading mx-5">
+                    <h1>Handbags</h1>
+                </div>
+                <div class="handbags Trending-products-container">
+                    <div class="row">
+                        <?php displayProducts($product_array[15]); ?>
+                    </div>
+                </div>
+                <div class="view-more-container mx-5">
+                    <?php echo !empty($product_array[15]) ? '<a href="./all-products.php?product_cat_ID=15" class="view-more-btn">View more <i class="fa-solid fa-arrow-right"></i> </a>' : '' ?>
+                </div>
             </section>
 
-            <!-- Wallets section -->
-            <section class="wallets-section product-section">
-                <h2>Wallets</h2>
-                <div class="wallets"></div>
+            <section class="wallets-section product-section my-5">
+                <div class="cat-heading mx-5">
+                    <h1>Wallets</h1>
+                </div>
+                <div class="wallets Trending-products-container">
+                    <div class="row">
+                        <?php displayProducts($product_array[16]); ?>
+                    </div>
+                </div>
+                <div class="view-more-container mx-5">
+                    <?php echo !empty($product_array[16]) ? '<a href="./all-products.php?product_cat_ID=16" class="view-more-btn">View more <i class="fa-solid fa-arrow-right"></i> </a>' : '' ?>
+                </div>
             </section>
 
-             <!-- Beauty products section -->
-             <section class="beauty-products-section product-section">
-                <h2>Beauty Products</h2>
-                <div class="beauty-products"></div>
+            <section class="beauty-products-section product-section my-5">
+                <div class="cat-heading mx-5">
+                    <h1>Beauty Products</h1>
+                </div>
+                <div class="beauty-products Trending-products-container">
+                    <div class="row">
+                        <?php displayProducts($product_array[17]); ?>
+                    </div>
+                </div>
+                <div class="view-more-container mx-5">
+                    <?php echo !empty($product_array[17]) ? '<a href="./all-products.php?product_cat_ID=17" class="view-more-btn">View more <i class="fa-solid fa-arrow-right"></i> </a>' : '' ?>
+                </div>
+            </section>
+            
+            <section class="other-products-section product-section my-5">
+                <div class="cat-heading mx-5">
+                    <h1>Other Products</h1>
+                </div>
+                <div class="other-products Trending-products-container">
+                    <div class="row">
+                        <?php displayProducts($product_array[18]); ?>
+                    </div>
+                </div>
+                <div class="view-more-container mx-5">
+                    <?php echo !empty($product_array[18]) ? '<a href="./all-products.php?product_cat_ID=18" class="view-more-btn">View more <i class="fa-solid fa-arrow-right"></i> </a>' : '' ?>
+                </div>
             </section>
 
         </div>
@@ -96,21 +247,24 @@
 
 
     <!-- footer  -->
-    <?php include './partials/footer.php'?>
+    <?php include './partials/footer.php' ?>
     <!-- footer  -->
 
     <!-- Popper JS before Bootstrap bundles -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+    </script>
 
     <!-- Boostrap Script CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    
+
     <!-- Vanilla JS -->
     <script src="./scripts/script.js"></script>
-    
-</body>
 
+</body>
 </html>

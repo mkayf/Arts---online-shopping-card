@@ -37,4 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', changeValueOnScroll);
 
+    // Change the color of navbar if user is on product-page for better UI
+    console.log(window.location.pathname == '/arts-online-shopping-cart/product-page.php');
+    if(window.location.pathname == '/arts-online-shopping-cart/product-page.php'){
+        document.getElementById('navbar').classList.add('purple-navbar');
+        console.log('purple-navbar');
+    }
+    else {
+        document.getElementById('navbar').classList.remove('purple-navbar');
+        console.log('not purple');
+    }
+
+
 })

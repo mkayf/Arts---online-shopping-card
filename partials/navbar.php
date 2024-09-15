@@ -7,9 +7,9 @@
             </button>
             <ul class="mb-0 nav-link-ul">
                 <li><a href="/arts-online-shopping-cart/index.php" class="link">Home</a></li>
-                <li><a href="#" class="link">About</a></li>
-                <li><a href="#" class="link">Products</a></li>
-                <li><a href="/arts-online-shopping-cart/contact-page.html" class="link">Contact us</a></li>
+                <li><a href="/arts-online-shopping-cart/about.php" class="link">About</a></li>
+                <li><a href="/arts-online-shopping-cart/products.php" class="link">Products</a></li>
+                <li><a href="/arts-online-shopping-cart/contact-page.php" class="link">Contact us</a></li>
             </ul>
         </div>
         <div class="nav-logo-div">
@@ -48,10 +48,10 @@
         <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
             <div>
                 <ul class="offcanvas-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/arts-online-shopping-cart/index.php">Home</a></li>
+                    <li><a href="/arts-online-shopping-cart/about.php">About</a></li>
+                    <li><a href="/arts-online-shopping-cart/products.php">Products</a></li>
+                    <li><a href="/arts-online-shopping-cart/contact-page.php">Contact</a></li>
                 </ul>
             </div>
         </div>
