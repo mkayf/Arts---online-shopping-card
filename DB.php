@@ -8,18 +8,10 @@
 
     $connection = mysqli_connect($servername,$username,$password,$Database);
     // if($connection){
-    //     ?>
-    //     <script>
-    //         alert("Database connection is sucessfull");
-    //     </script>
-    //     <?php
+    //   echo = "Database connection is sucessfull";
     // }
     // else{
-    //     ?>
-    //     <script>
-    //         alert("Database connection is erorr");
-    //     </script>
-    //     <?php
+    //   echo = "Database connection is sucessfull"; 
     // }
-
+    
 ?>
