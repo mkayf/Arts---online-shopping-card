@@ -66,7 +66,7 @@
   <!-- Navbar -->
 
     <!-- contact-page-banner  -->
-    <section class="contact-page-banner">
+    <section class="contact-page-banner banner">
         <div class="contact-page-container">
             <div class="contact-page-content">
                 <div class="contact-page-banner-img">

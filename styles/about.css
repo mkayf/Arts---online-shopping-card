@@ -1,0 +1,65 @@
+
+.sleep{
+    font-size: 80px;
+}
+
+
+#about-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), #222222), url("6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100px;
+}
+
+#about-banner h1{
+    font-size: 80px;
+}
+
+.about-section {
+    padding: 70px 0;
+}
+
+.about-section h1 {
+    color: #222222;
+    text-transform: uppercase;
+}
+
+.about-img-div img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    object-fit: cover;
+}
+
+.about-text-div p {
+    font-size: 18px;
+}
+
+.about-btn {
+    width: 250px;
+    height: 50px;
+    padding: 11px 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: #222222;
+    border: 1px solid #222222;
+    color: #fff;
+    font-weight: light;
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+.about-btn:hover {
+    background-color: transparent;
+    color: #222222;
+}
+
+
+ 

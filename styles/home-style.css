@@ -71,6 +71,25 @@
     --top-spacing: 100px;
 }
 
+
+/* Banner of webpages */
+.banner{
+    height: 350px;
+}
+.banner h1{
+    font-size: 4rem;
+}
+
+@media (max-width: 576px){
+    .banner{
+        height: 250px;
+    }
+
+    .banner h1{
+        font-size: 2.5rem;
+    }
+}
+
 /* shop button pre styled */
 
 .purple-btn{
@@ -108,6 +127,7 @@ header nav{
     padding: 0 50px;
     width: 100%;
     z-index: 1000;
+    top: 0;
 }
 
 header .sticky{
@@ -661,6 +681,8 @@ header .offcanvas-links li a{
     padding: 16px;
     margin: 24px 16px;
     height: 350px;
+    /* cursor: pointer; */
+    transition: all 0.2s ease-in-out;
 }
 .card-img-top{
     height: 350px;
@@ -670,16 +692,12 @@ header .offcanvas-links li a{
 
 .card img{
     width: 100%;
-    height:auto;
+    height: 350px;
     object-fit: cover;
     border-radius: 8px;
     transition: all ease 0.6s;
 }
-/* .card img:hover{
-    transform: scale(1.5);
-} */
 .card-body{
-    /* border: 2px solid red; */
     font-family: var(--sen-regular);
     padding: 16px 12px 0 12px
 }
@@ -695,28 +713,39 @@ header .offcanvas-links li a{
     justify-content: space-between ;
 }
 
-.trending-cards-rating{
+.trending-cards-rating i{
     color: goldenrod;
-    font-size: 0.8rem;
+    font-size: 0.9rem;  
+    margin: 0 1px;
 }
 
-.product-cart-btn{
+
+.view-product-btn{
     margin-top: 12px;
     border: none;
     background-color: var(--button-color);
-    width: 55px;
+    width: 120px;
     height: 40px;
     color: whitesmoke;
     border-radius: 36px;
-    transform: translateY(60px);
-    opacity: 0;
-    transition: all 0.7s ease-in-out;
+    outline: transparent;
+    font-size: 0.9rem;
+    font-family: var(--sen-regular);
+    transition: all 0.2s ease-in-out;
 }
 
-.card:hover .product-cart-btn{
+.view-product-btn:hover{
+    background-color: #694da1;
+}
+
+.view-product-btn:active{
+    transform: scale(0.92);
+}
+
+/* .card:hover .product-cart-btn{
     opacity: 1;
     transform: translateY(0px);
-}
+} */
 /* Trending-products-Responsive  */
 
 @media (max-width: 960px){
@@ -868,6 +897,22 @@ header .offcanvas-links li a{
     color: #444444;
     font-family: var(--sen-semibold);
     cursor: pointer;
+    text-decoration: none;
+}
+
+.cat-btn{
+    /* display: none; */
+    opacity: 0;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.c-column:hover .cat-btn{
+    /* width: 120px;
+    height: 40px; */
+    opacity: 1;
 }
 
 .c-column:active{
@@ -1409,18 +1454,22 @@ header .offcanvas-links li a{
 .footer-img-1{
     width: 40px;
     height: 25px;
+    border-radius: 5px;
 }
 .footer-img-2{
     width: 40px;
     height: 25px;
+    border-radius: 5px;
 }
 .footer-img-3{
     width: 40px;
     height: 25px;
+    border-radius: 5px;
 }
 .footer-img-4{
     width: 40px;
     height: 25px;
+    border-radius: 5px;
 }
 
 /* Footer-Responsive  */
