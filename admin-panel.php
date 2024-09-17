@@ -199,7 +199,6 @@ if (isset($_POST['upload-product'])) {
             <h2 class="my-4">Browse Sections</h2>
             <button class="tab-btn active" onclick="switchTabs(event, 'upload-products-section')">Upload products</button>
             <button class="tab-btn" onclick="switchTabs(event, 'panel-products-section')">Show products</button>
-            <button class="tab-btn" onclick="switchTabs(event, 'employees-section')">Employees</button>
         </div>
 
 
@@ -266,11 +265,6 @@ if (isset($_POST['upload-product'])) {
         <!-- All products section -->
         <section class="panel-products tab-content" id="panel-products-section">
             <h1 class="mb-5 mt-3">Panel products</h1>
-        </section>
-
-        <!-- Employees section -->
-        <section class="employees tab-content" id="employees-section">
-            <h1 class="mb-5 mt-3">Employees</h1>
         </section>
 
     </div>  

@@ -56,7 +56,7 @@
 .upload-products-section{
     /* display: block; */
     width: 600px;
-    padding: 20px;
+    padding: 32px;
     background-color: var(--primary-color);
     border-radius: 12px;
     font-family: var(--sen-regular);

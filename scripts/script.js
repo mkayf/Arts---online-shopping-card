@@ -67,12 +67,14 @@ if(productImg1 && productImg2 && productMainImg){
 // Switch Tabs in admin panel 
 function switchTabs(evnt, contentID){  
 
+// Remove active class from tab button
   const tabBtn = document.getElementsByClassName('tab-btn');
 
   for(let i = 0; i < tabBtn.length; i++){
    tabBtn[i].classList.remove('active'); 
   }
 
+// Hide other contents
   const tabContent = document.getElementsByClassName('tab-content');
 
   for(let j = 0; j < tabContent.length; j++){
@@ -80,7 +82,10 @@ function switchTabs(evnt, contentID){
 
   }
 
+// Add active class to clicked button 
   evnt.target.classList.add('active');
+
+// Show the main content
   document.getElementById(contentID).style.display = 'block';
 
 }
