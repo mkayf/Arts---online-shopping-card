@@ -24,6 +24,37 @@
 
     <!-- Home page css link -->
      <link rel="stylesheet" href="./styles/home-style.css">
+
+
+     <!-- contact-form-php-start  -->
+     <?php
+     
+    if(isset($_POST['contact-submit'])){
+      $to = "sammadaltaf43@gmail.com";
+      $subject = $_POST['fullname'];
+      $message = $_POST['message'];
+      $from = $_POST['email'];
+      $headers = 'From : $from';
+
+      // mail($to,$subject,$message,$from);
+
+      if(mail($to,$subject,$message,$from)){
+        ?>
+        <script>
+          alert("mail has been send successfully");
+        </script>
+        <?php
+      }
+      else{
+        ?>
+        <script>
+          alert("mail send error");
+        </script>
+        <?php
+      }
+    }
+     ?>
+
 </head>
 <body>
 
@@ -69,41 +100,39 @@
       </section>
 
       <!-- have any Question  -->
-
       <section class="contact-form container-fluid">
-        <div class="contact-form-heading">
+        <form action="contact-page.php" method="POST" class="contact-form-heading">
           <h4>Contact Us</h4>
           <h5>Have Any Questions?</h5>
         </div>
-
         <div class="contact-form-content">
           <div class="row">
           <div class="bug col-12">
           <h5 class="heading-1" >Write comment</h5>
-          <Textarea placeholder="Type your comment"></Textarea>
+          <Textarea name="message" placeholder="Type your comment"></Textarea>
           <span id="textarea_error"></span>
         </div>
       </div>
       <div class="row">
           <div class="bug col-12 col-sm-12 col-md-4 col-lg-4">
           <h5 class="heading-2">Full Name</h5>
-          <input type="text" placeholder="Enter your name" class="input-1">
+          <input type="text" name="fullname" placeholder="Enter your name" class="input-1">
           <span id="name_error"></span>
         </div>
           <div class="bug col-12 col-sm-12 col-md-4 col-lg-4">
           <h5 class="heading-3">Email</h5>
-          <input type="email" name="" id="" placeholder="Enter your email Address" class="input-2">
+          <input type="email" name="email" id="" placeholder="Enter your email Address" class="input-2">
           <span id="email_error"></span>
         </div>
           <div class="bug col-12 col-sm-12 col-md-4 col-lg-4">
           <h5 class="heading-4">Phone Number</h5>
-          <input type="tel" name="" id="" placeholder=" phone number" class="input-3">
+          <input type="tel" name="phone-no" id="" placeholder=" phone number" class="input-3">
           <span id="phone_error"></span>
         </div>
       </div>
-          <a href=""><button>Submit</button></a>
+          <a href=""><button name="contact-submit">Submit</button></a>
           <span id="submit_error"></span>
-        </div>
+      </form>
       </section>
 
       <!-- map  -->
