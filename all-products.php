@@ -1,6 +1,6 @@
 <?php
     include './partials/db_connection.php';
-
+    include './partials/render_rating_stars.php';
     // Get category ID of one category and display all the related products
 
     // To prevent the code from breaking if user directly change the category ID from URL
@@ -78,12 +78,7 @@
                             <div class="card-middle-content">
                                 <label for="">PKR <span> '. $row['product_price'] .'</span></label>
                                 <div class="trending-cards-rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    '. renderRatingStars($row['product_rating']) .'
                                 </div>
                             </div>
                             <div class="card-bottom-content">

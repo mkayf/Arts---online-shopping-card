@@ -1,5 +1,6 @@
 <?php
     include './partials/db_connection.php';
+    include './partials/render_rating_stars.php';
 
     // Get product ID of product to display
 
@@ -15,11 +16,14 @@
     }
 
     // Fetch the product respective of its product ID
+
     $fetchProduct = "SELECT * FROM `products` WHERE product_ID = '$product_ID'";
     $result = mysqli_query($conn, $fetchProduct);
     $product = mysqli_fetch_assoc($result);
     $product_cat_ID = $product['product_cat_ID'];
+
     // Fetch category name of the product
+
     $fetch_cat = "SELECT category_name from `product_categories` WHERE category_ID = '$product_cat_ID'";
     $result = mysqli_query($conn, $fetch_cat);
     $product_cat_name = mysqli_fetch_assoc($result);
@@ -72,8 +76,11 @@
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 product-details-div">
               <p style="letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem; font-family: var(--sen-regualar);">Category: <span class="product-category"> <?php echo $product_cat_name['category_name']; ?> </span></p>
+              <p style="letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem; font-family: var(--sen-regualar);">Product Code: <span class="product-category"> <?php echo $product_cat_ID . $product_ID ?> </span></p>
               <h1 class="product-name"> <?php echo $product['product_name']; ?> </h1>
-              <div class="stars-div"></div>
+              <div class="stars-div">
+                <?php echo renderRatingStars($product['product_rating']); ?>
+              </div>
               <h4 class="currency">PKR <span class="product-price"> <?php echo $product['product_price']; ?> </span></h4>
               <div class="description-div">
               <h5 style="font-size: 0.9rem; letter-spacing: 1px; font-weight: 600;">Product Description:</h5>
@@ -82,8 +89,8 @@
             <hr>
             <div class="quantity-and-cart">
               <label for="quantity-input" class="me-2">Quantity:</label>
-              <input type="number" id="quantity-input" class="me-4" min="1" max="10">
-              <button id="add-to-cart-btn">ADD TO CART</button>
+              <input type="number" id="quantity-input" class="me-4" max="<?php echo $product['product_stock']; ?>" value="1">
+              <button id="add-to-cart-btn">ADD TO CART <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             </div>
           </div>

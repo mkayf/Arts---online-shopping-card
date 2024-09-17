@@ -713,10 +713,12 @@ header .offcanvas-links li a{
     justify-content: space-between ;
 }
 
-.trending-cards-rating{
+.trending-cards-rating i{
     color: goldenrod;
-    font-size: 0.8rem;
+    font-size: 0.9rem;  
+    margin: 0 1px;
 }
+
 
 .view-product-btn{
     margin-top: 12px;

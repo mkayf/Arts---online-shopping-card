@@ -4,16 +4,17 @@ include './partials/db_connection.php';
 // Initially when product is not added
 $product_added = false;
 
-// Errors regarding image upload
+// Errors regarding product upload
 $extension_error = false;
 $image_error = false;
 $upload_limit_error = false;
 $upload_error = false;
 $product_add_error = false;
 $empty_fields = false;
+$rating_error = false;
 
 
-if (isset($_POST['add-product'])) {
+if (isset($_POST['upload-product'])) {
     
     $product_category = $_POST['category'];
     // Check if only two images are being uploaded
@@ -63,26 +64,28 @@ if (isset($_POST['add-product'])) {
 
         // Check if all the necessary data is not empty
         if(!empty($product_name) && !empty($product_desc) && !empty($product_price) && !empty($product_stock) && !empty($product_rating) && !empty($product_img_1) && !empty($product_img_2)){
+            if($product_rating > 0 && $product_rating < 6){
+                $SQL = "INSERT INTO `products` (product_name, product_desc, product_price, product_stock, product_rating, product_img_1, product_img_2, product_cat_ID) VALUES ('$product_name', '$product_desc', '$product_price', '$product_stock', '$product_rating', '$product_img_1', '$product_img_2', $category_ID)";
 
-            $SQL = "INSERT INTO `products` (product_name, product_desc, product_price, product_stock, product_rating, product_img_1, product_img_2, product_cat_ID) VALUES ('$product_name', '$product_desc', '$product_price', '$product_stock', '$product_rating', '$product_img_1', '$product_img_2', $category_ID)";
-
-        $result = mysqli_query($conn, $SQL);
-        if($result){
-            $product_added = 'Product: ' . $product_name . ' successfully added to ' . $product_category . ' category';
-        } else{
-            $product_add_error = 'Failed to add product! Please try again.';
-        }
+            $result = mysqli_query($conn, $SQL);
+            if($result){
+                $product_added = 'Product: ' . $product_name . ' successfully added to ' . $product_category . ' category';
+            } else{
+                $product_add_error = 'Failed to add product! Please try again.';
+             }
+            } else{
+                $rating_error = 'Please enter rating greater than 0 and less than 6';
+            }
 
         } else{
             $empty_fields = 'Please enter all the details';
-        }
- 
-
-    } else {
+     }
+  } else {
         $upload_limit_error = 'Only 2 product images are allowed';
         
     }
 }
+
 
 
 ?>
@@ -182,18 +185,39 @@ if (isset($_POST['add-product'])) {
                 </div>';
         }
 
+        if($rating_error){
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+             <strong>Error!</strong> '. $rating_error .'
+             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
+        }
+
      ?>
 
+        <!-- Tabs for navigation     -->
+        <div class="tabs-container my-5 container">
+            <h2 class="my-4">Browse Sections</h2>
+            <button class="tab-btn active" onclick="switchTabs(event, 'upload-products-section')">Upload products</button>
+            <button class="tab-btn" onclick="switchTabs(event, 'panel-products-section')">Show products</button>
+            <button class="tab-btn" onclick="switchTabs(event, 'employees-section')">Employees</button>
+        </div>
 
-        <section class="upload-products-section container">
-            <h1 class="my-4">Upload products</h1>
+
+        <!-- Content sections -->
+    <div class="content-div container">
+        
+    <!-- Upload products section -->
+    <section class="upload-products-section tab-content active" id="upload-products-section">
+            <h1 class="mb-5 mt-3">Upload products</h1>
             <div>
                 <form method="POST" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label for="product-images" class="form-label">Select 2 product images</label>
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="mb-3 col col-12 col-md-6 col-lg-6">
+                        <label for="product-images" class="form-label d-block">Select 2 product images</label>
                         <input type="file" id="product-images" name="product-images[]" multiple accept="image/*" required>
-                    </div>
-                    <div class="mb-3">
+                        </div>
+
+                        <div class="mb-3 col col-12 col-md-6 col-lg-6">
                         <label for="category-select">Select category</label>
                         <select class="form-select" aria-label="Default select example" name="category">
                             <option value="Gift Articles">Gift Articles</option>
@@ -205,32 +229,53 @@ if (isset($_POST['add-product'])) {
                             <option value="Beauty Products">Beauty Products</option>
                             <option value="Other Products">Other Products</option>
                         </select>
-                    </div>
-                    <div class="mb-3">
+                        </div>
+
+                        <div class="mb-3 col col-12">
                         <label for="product-name" class="form-label">Product Name</label>
                         <input type="text" class="form-control" id="product-name" name="product-name">
-                    </div>
-                    <div class="mb-3">
+                        </div>
+
+                        <div class="mb-3 col col-12">
                         <label for="product-desc" class="form-label">Product Description</label>
                         <textarea name="product-desc" id="product-desc" class="form-control"></textarea>
-                    </div>
-                    <div class="mb-3">
+                        </div>
+
+                        <div class="mb-3 col col-12 col-md-4 col-lg-4">
                         <label for="product-price" class="form-label">Product Price</label>
                         <input type="number" class="form-control" id="product-price" name="product-price">
-                    </div>
-                    <div class="mb-3">
+                        </div>
+                        
+                        <div class="mb-3 col col-12 col-md-4 col-lg-4">
                         <label for="product-stock" class="form-label">Product stock</label>
                         <input type="number" class="form-control" id="product-stock" name="product-stock">
-                    </div>
-                    <div class="mb-3">
+                        </div>
+
+                        <div class="mb-3 col col-12 col-md-4 col-lg-4">
                         <label for="product-rating" class="form-label">Product Rating</label>
-                        <input type="number" class="form-control" id="product-rating" name="product-rating">
+                        <input type="number" class="form-control" id="product-rating" name="product-rating" max="5" min="1" step=".1">
+                        </div>
+
+                        <input type="submit" class="btn purple-btn mb-0 mt-3" name="upload-product" value="Upload product" />
+
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg" name="add-product">Add product</button>
                 </form>
             </div>
         </section>
-    </main>
+
+        <!-- All products section -->
+        <section class="panel-products tab-content" id="panel-products-section">
+            <h1 class="mb-5 mt-3">Panel products</h1>
+        </section>
+
+        <!-- Employees section -->
+        <section class="employees tab-content" id="employees-section">
+            <h1 class="mb-5 mt-3">Employees</h1>
+        </section>
+
+    </div>  
+
+</main>
 
 
 

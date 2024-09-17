@@ -112,15 +112,28 @@
   }
   .main-img-div img {
     width: 350px;
+    border-radius: 23px;
+  }
+  .other-img-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .other-img-div img {
     margin: 7px 30px;
     cursor: pointer;
     width: 100px;
+    border-radius: 23px;
   }
   .stars-div {
     position: relative;
     bottom: 7px;
+  }
+  .stars-div i{
+    color: goldenrod;
+    margin: 4px 2px;
+    font-size: 0.9rem;
   }
   .quantity-and-cart{
     display: flex;
@@ -157,7 +170,7 @@
   }
   #add-to-cart-btn:hover{
       background-color: transparent;
-      color: #222222;
+      color: var(--primary-color);
   }
   
 

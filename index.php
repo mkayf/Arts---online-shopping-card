@@ -1,10 +1,11 @@
 <?php
 
 include './partials/db_connection.php';
+include './partials/render_rating_stars.php';
 
 // Fetch products to populate trending products section.
 // NOTE:
-// These products are in trending because of pre online sales according to owner.
+// We are assuming these products are in trending because of pre online sales according to owner.
 
 $array_of_queries = [
     "SELECT * FROM `products` WHERE product_cat_ID = 11 LIMIT 2 offset 2",
@@ -23,6 +24,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
         }
     }
 }
+
 
 
 ?>
@@ -113,12 +115,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
                             <div class="card-middle-content">
                                 <label for="">PKR <span> '. $product['product_price'] .'</span></label>
                                 <div class="trending-cards-rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    '. renderRatingStars($product['product_rating']) .'
                                 </div>
                             </div>
                             <div class="card-bottom-content">

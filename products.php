@@ -1,5 +1,6 @@
 <?php
 include './partials/db_connection.php';
+include './partials/render_rating_stars.php';
 
 // Select 4 products from each category and display them to the page
 
@@ -60,12 +61,7 @@ function displayProducts($products){
                             <div class="card-middle-content">
                                 <label for="">PKR <span> '. $product['product_price'] .'</span></label>
                                 <div class="trending-cards-rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    '. renderRatingStars($product['product_rating']) .'
                                 </div>
                             </div>
                             <div class="card-bottom-content">
