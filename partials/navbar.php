@@ -14,7 +14,7 @@
         </div>
         <div class="nav-logo-div">
             <a href="/arts-online-shopping-cart/index.php">
-            <img src="/arts-online-shopping-cart/assets/images/logo1.png" alt="Logo" id="logo">
+            <img src="/arts-online-shopping-cart/assets/images/Arts-logo-2.png" alt="Logo" id="logo">
             </a>
         </div>
         <div class="nav-icons-div">

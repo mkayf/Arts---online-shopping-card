@@ -224,12 +224,13 @@ header nav .nav-link-ul li .link{
 
 header nav .nav-logo-div{
     padding-right: 0;
+    padding-top: 50px;
     color: white;
 }
 
 header nav .nav-logo-div img{
-    /* width: 130px; */
-    height: 60px;
+    width: 200px;
+    height: auto;
 }
 
 header nav .nav-links-div{

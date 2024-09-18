@@ -5,7 +5,7 @@
                 <div class="footer-content-1">
                     <div class="footer-heading-1">
                     <a href="/arts-online-shopping-cart/index.php">
-                        <img src="/arts-online-shopping-cart/assets/images/logo1.png" alt="Logo" height="">
+                        <img src="/arts-online-shopping-cart/assets/images/Arts-logo-2.png" alt="Logo">
                     </a>
                     </div>
                     <ul>
