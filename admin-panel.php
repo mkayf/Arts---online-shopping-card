@@ -4,7 +4,7 @@ include './partials/db_connection.php';
 // Initially when product is not added
 $product_added = false;
 
-// Errors regarding product upload
+// Errors regarding product upload and update
 $extension_error = false;
 $image_error = false;
 $upload_limit_error = false;
@@ -12,7 +12,10 @@ $upload_error = false;
 $product_add_error = false;
 $empty_fields = false;
 $rating_error = false;
-
+$product_updated = false;
+$product_update_error = false;
+$product_deleted = false;
+$product_delete_error = false;
 
 if (isset($_POST['upload-product'])) {
     
@@ -85,6 +88,44 @@ if (isset($_POST['upload-product'])) {
         
     }
 }
+
+
+// Update product 
+if(isset($_POST['update-product'])){
+    $product_ID = mysqli_real_escape_string($conn, $_POST['update-placeholder']);
+    $product_name = mysqli_real_escape_string($conn, $_POST['update-p-name']);
+    $product_desc = mysqli_real_escape_string($conn, $_POST['update-p-desc']);
+    $product_price = mysqli_real_escape_string($conn, $_POST['update-p-price']);
+    $product_stock = mysqli_real_escape_string($conn, $_POST['update-p-stock']);
+
+
+    // Update the selected product data
+    $SQL = "UPDATE `products` SET product_name = '$product_name', product_desc = '$product_desc', product_price = '$product_price', product_stock = '$product_stock' WHERE product_ID = '$product_ID'";
+
+    $result = mysqli_query($conn, $SQL);
+
+    if($result){
+        $product_updated = 'Product: ' . $product_name . ' has been updated successfully';
+    }
+    else{
+        $product_update_error = 'Failed to update product';
+    }
+}
+
+// Delete product
+if(isset($_POST['delete-product'])){
+    $delete_ID = mysqli_real_escape_string($conn, $_POST['delete-placeholder']);
+    $SQL = "DELETE FROM `products` WHERE product_ID = '$delete_ID'";
+    $result = mysqli_query($conn, $SQL);
+    
+    if($result){
+        $product_deleted = 'Product deleted successfully';
+    }
+    else{
+        $product_delete_error = 'Failed to delete product';
+    }
+}
+
 
 
 
@@ -192,7 +233,90 @@ if (isset($_POST['upload-product'])) {
                 </div>';
         }
 
+        if($product_updated){
+            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+             <strong>Success!</strong> '. $product_updated .'
+             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
+        }
+
+        if($product_update_error){
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+             <strong>Error!</strong> '. $product_update_error .'
+             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
+        }
+
+        if($product_deleted){
+            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+             <strong>Success!</strong> '. $product_deleted .'
+             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
+        }
+
+        if($product_delete_error){
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+             <strong>Error!</strong> '. $product_delete_error .'
+             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>';
+        }
      ?>
+        <!-- Update modal -->
+         <!-- Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update products</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form method="POST">
+      <input type="hidden" name="update-placeholder" id="update-placeholder">
+  <div class="mb-3">
+    <label for="update-p-name" class="form-label">Product Name</label>
+    <input type="text" class="form-control" id="update-p-name" name="update-p-name">
+  </div>
+  <div class="mb-3">
+    <label for="update-p-desc" class="form-label">Product Description</label>
+    <textarea name="update-p-desc" id="update-p-desc" class="form-control"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="update-p-price" class="form-label">Product Price</label>
+    <input type="number" class="form-control" id="update-p-price" name="update-p-price">
+  </div>
+  <div class="mb-3">
+    <label for="update-p-stock" class="form-label">Product Stock</label>
+    <input type="number" class="form-control" id="update-p-stock" name="update-p-stock">
+  </div>
+  <button type="submit" class="btn btn-primary" name="update-product">Update product</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Delete modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Product</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form method="POST">
+      <input type="hidden" name="delete-placeholder" id="delete-placeholder">
+      <p>Do you want to delete this product</p>
+    <button type="submit" class="btn btn-primary" name="delete-product">Delete product</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         <!-- Tabs for navigation     -->
         <div class="tabs-container my-5 container">
@@ -264,7 +388,11 @@ if (isset($_POST['upload-product'])) {
 
         <!-- All products section -->
         <section class="panel-products tab-content" id="panel-products-section">
-            <h1 class="mb-5 mt-3">Panel products</h1>
+            <h1 class="mb-5 mt-3">All products</h1>
+
+            <div class="panel-products-container">
+
+            </div>
         </section>
 
     </div>  
@@ -292,6 +420,9 @@ if (isset($_POST['upload-product'])) {
 
     <!-- Vanilla JS -->
     <script src="./scripts/script.js"></script>
+
+    <!-- AJAX script for fetching products, employees, orders etc -->
+     <script src="./scripts/fetchData.js"></script>
 
 </body>
 

@@ -80,7 +80,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
                             <h1>Your One-Stop Shop for Stationery, Gifts, and More</h1>
                             <p>Explore our carefully curated collection of unique gifts, arts, and accessories. Shop
                                 with ease and have your favorites delivered right to your door.</p>
-                            <a href="#" class="purple-btn">Shop now</a>
+                            <a href="/arts-online-shopping-cart/products.php" class="purple-btn">Shop now</a>
                         </div>
                         <div class="c-img-div">
                             <img src="./assets/images/hero-img-1.png" alt="" width="500px">
@@ -144,7 +144,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
                     <h2>Free Delivery!</h2>
                     <h1>On Orders Over Rs.2,000</h1>
                     <p>Enjoy the convenience of free delivery on orders above Rs.2,000</p>
-                    <a href="#" class="purple-btn">Shop now</a>
+                    <a href="/arts-online-shopping-cart/products.php" class="purple-btn">Shop now</a>
                 </div>
                 <div class="f-delivery-img col col-12 col-md-6 col-lg-6">
                     <img src="./assets/images/free-delivery-1.svg" alt="">
