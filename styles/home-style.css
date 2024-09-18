@@ -224,13 +224,18 @@ header nav .nav-link-ul li .link{
 
 header nav .nav-logo-div{
     padding-right: 0;
-    padding-top: 50px;
+    padding-top: 20px;
     color: white;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header nav .nav-logo-div img{
-    width: 200px;
-    height: auto;
+    width: 72px;
+    height: 70px;
+    aspect-ratio: 3/2;
 }
 
 header nav .nav-links-div{
@@ -1332,11 +1337,10 @@ header .offcanvas-links li a{
 .footer-content-1{
     margin-top: 5%;
 }
-.footer-heading-1 h4{
-    font-family: 'DancingScript-bold';
-    font-size: 3vw;
-    color: whitesmoke;
+.footer-heading-1 img{
+    width: 70px;
 }
+
 .footer-content-1 ul{
     padding: 0;
     display: flex;

@@ -25,12 +25,12 @@
     <!-- Home page css link -->
      <link rel="stylesheet" href="./styles/home-style.css">
 
-
+    
      <!-- contact-form-php-start  -->
      <?php
      
     if(isset($_POST['contact-submit'])){
-      $to = "sammadaltaf43@gmail.com";
+      $to = "muhammadkaif150@gmail.com";
       $subject = $_POST['fullname'];
       $message = $_POST['message'];
       $from = $_POST['email'];
@@ -125,7 +125,7 @@
           <span id="email_error"></span>
         </div>
           <div class="bug col-12 col-sm-12 col-md-4 col-lg-4">
-          <h5 class="heading-4">Phone Number</h5>
+          <h5 class="heading-4 phone-head">Phone Number</h5>
           <input type="tel" name="phone-no" id="" placeholder=" phone number" class="input-3">
           <span id="phone_error"></span>
         </div>

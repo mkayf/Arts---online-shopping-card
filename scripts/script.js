@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let navAnimate = false;
   let navLinks = document.getElementsByClassName("link");
   let navIcons = document.getElementsByClassName("nav-icons");
-  let logo = document.getElementById("logo");
+  // let logo = document.getElementById("logo");
   let collapseBtn = document.getElementsByClassName("collapse-btn")[0];
+  let navLogoDiv = document.querySelector('.nav-logo-div');
   // Animate the navbar on scroll
 
   const changeValueOnScroll = () => {
@@ -18,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
       Array.from(navIcons).forEach((icon) => {
         icon.style.filter = "invert(0)";
       });
-      logo.style.filter = "invert(1)";
-      // console.log(logo);
+      navLogoDiv.style.paddingTop = '0';
+      // console.log(navLogoDiv);
       collapseBtn.style.filter = "invert(1)";
     } else {
       document.getElementById("navbar").classList.remove("sticky");
@@ -30,8 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Array.from(navIcons).forEach((icon) => {
         icon.style.filter = "invert(1)";
       });
-      // logo.style.filter = "invert(0)";
-      // collapseBtn.style.filter = "invert(0)";
+      navLogoDiv.style.paddingTop = '20px';
     }
   };
 

@@ -1,20 +1,20 @@
 
 <?php
 
-include 'DB.php';
+include './partials/db_connection.php';
 
-if(isset($_POST['submit'])){
-  $email = mysqli_real_escape_string( $connection, $_POST['email']);
-  $password = mysqli_real_escape_string( $connection, $_POST['password']);
+if(isset($_POST['login-btn'])){
+  $email = mysqli_real_escape_string( $conn, $_POST['email']);
+  $password = mysqli_real_escape_string( $conn, $_POST['password']);
 
   $email_search = "SELECT * FROM signup WHERE email= '$email'";
-  $query = mysqli_query($connection,$email_search);
+  $query = mysqli_query($conn,$email_search);
 
   $email_count = mysqli_num_rows($query);
   
   if($email_count>0){
     $email_pass = mysqli_fetch_assoc($query);
-    $db_pass = $email_pass['pasword'];
+    $db_pass = $email_pass['Pasword'];
 
     $pass_decode = password_verify($password,$db_pass);
 
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     else{
       ?>
       <script>
-        alert("password Incorrect")
+        alert("password Incorrect");
       </script>
       <?php
     }
@@ -69,7 +69,7 @@ if(isset($_POST['submit'])){
                 <div class="login-inputs">
                     <input type="email" name="email" id="login-email" placeholder="Enter your email">
                     <input type="password" name="password" id="login-pass" placeholder="Enter your password">
-                    <button name="submit">Login</button>
+                    <button name="login-btn" id="loginsubmit">Login</button>
                     <p>Don't have an account? <span>Signup</span></p>
                 </div>
         </form>

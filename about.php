@@ -12,11 +12,16 @@
     <!-- CUSTOM CSS LINK -->
     <link rel="stylesheet" href="./styles/about.css">
 
+    <!-- Home css -->
+     <link rel="stylesheet" href="./styles/home-style.css">
+
     <!-- FONTAWESOME LIBRARY CDN LINK -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 </head>
 <body>
+    <!-- navbar -->
+     <?php include './partials/navbar.php'; ?>
       
   
       <!-- about section banner -->
@@ -58,7 +63,7 @@
                     <img src="assets/images/person-1.png" alt="">
                     <h4>Michael Clarke</h4>
                   </div>
-                  <div class="content-box mx-3 text-justify"><span class="quote">"</span>Shopping at TRUFIT is a pleasure! Their user-friendly website made finding what I needed a breeze, and the variety of products is outstanding. I couldn't be happier with my purchase.<span class="quote">"</span></div>
+                  <div class="content-box mx-3 text-justify"><span class="quote">"</span>Shopping at ARTS is a pleasure! Their user-friendly website made finding what I needed a breeze, and the variety of products is outstanding. I couldn't be happier with my purchase.<span class="quote">"</span></div>
                 </div>
               </div>
               <div class="carousel-item tm" data-bs-interval="4000">
@@ -68,7 +73,7 @@
                     <h4>David Ramirez</h4>
                   </div>
                   <div class="content-box mx-3 text-justify">
-                    <span class="quote">"</span>I've been a loyal customer of TRUFIT for a while now. The selection of products is vast, the prices are competitive, and the shipping is always on time. It's a one-stop shop for all my needs!<span class="quote">"</span>
+                    <span class="quote">"</span>I've been a loyal customer of ARTS for a while now. The selection of products is vast, the prices are competitive, and the shipping is always on time. It's a one-stop shop for all my needs!<span class="quote">"</span>
                   </div>
                 </div>
               </div>
@@ -79,7 +84,7 @@
                     <h4>Sarah Anderson</h4>
                   </div>
                   <div class="content-box mx-3 text-justify">
-                    <span class="quote">"</span>I've shopped online extensively, and TRUFIT stands out as one of the best. Their customer service is top-notch, and the products are of the highest quality. I highly recommend them to anyone looking for great deals and a seamless shopping experience.<span class="quote">"</span>
+                    <span class="quote">"</span>I've shopped online extensively, and ARTS stands out as one of the best. Their customer service is top-notch, and the products are of the highest quality. I highly recommend them to anyone looking for great deals and a seamless shopping experience.<span class="quote">"</span>
                   </div>
                 </div>
               </div>
@@ -90,7 +95,7 @@
                     <h4>Mark Daniel</h4>
                   </div>
                   <div class="content-box mx-3 text-justify">
-                    <span class="quote">"</span>I recently ordered from TRUFIT and was impressed with the product's quality and the quick delivery. The website is well-organized, making it easy to find what I was looking for. This is my new go-to for online shopping.<span class="quote">"</span>
+                    <span class="quote">"</span>I recently ordered from ARTS and was impressed with the product's quality and the quick delivery. The website is well-organized, making it easy to find what I was looking for. This is my new go-to for online shopping.<span class="quote">"</span>
                   </div>
                 </div>
               </div>
@@ -101,7 +106,7 @@
                     <h4>Laura John</h4>
                   </div>
                   <div class="content-box mx-3 text-justify">
-                    <span class="quote">"</span>I am beyond thrilled with my recent purchase from TRUFIT. The product quality exceeded my expectations, and the speedy delivery made my shopping experience truly exceptional. I'll definitely be back for more!<span class="quote">"</span>
+                    <span class="quote">"</span>I am beyond thrilled with my recent purchase from ARTS. The product quality exceeded my expectations, and the speedy delivery made my shopping experience truly exceptional. I'll definitely be back for more!<span class="quote">"</span>
                   </div>
                 </div>
               </div>
@@ -110,6 +115,9 @@
       </section>
 
     
+  <!-- footer -->
+  <?php include './partials/footer.php'; ?>
+
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

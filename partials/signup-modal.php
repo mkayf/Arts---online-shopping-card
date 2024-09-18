@@ -2,16 +2,16 @@
 <!-- signup-form-php -->
 <?php
   
-  include "DB.php";
-  if(isset($_POST['submit'])){
-    $name = mysqli_real_escape_string($connection, $_POST['fullname']);
-    $email = mysqli_real_escape_string($connection, $_POST['email']);
-    $password = mysqli_real_escape_string($connection, $_POST['password']);
+  include "./partials/db_connection.php";
+  if(isset($_POST['signup-btn'])){
+    $name = mysqli_real_escape_string($conn, $_POST['fullname']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
 
     $secure_password = password_hash($password,PASSWORD_BCRYPT);
 
     $emailquery = "SELECT * FROM signup WHERE email='$email'";
-    $query1 = mysqli_query($connection,$emailquery);
+    $query1 = mysqli_query($conn,$emailquery);
 
     $emailcount =mysqli_num_rows($query1);
 
@@ -24,19 +24,19 @@
     }
     else{
       $insertquery = "INSERT INTO signup(Name,Email,Pasword)VALUES('$name','$email','$secure_password')";
-      $query2 = mysqli_query($connection,$insertquery);
+      $query2 = mysqli_query($conn,$insertquery);
 
       if($query2){
         ?>
         <script>
-          alert("Data Inserted Successfully");
+          alert("Your account has been created successfully!");
         </script>
         <?php
       }
       else{
         ?>
         <script>
-          alert("Data Is Not Inserted");
+          alert("Your account couldn't be created due to technical error");
         </script> 
         <?php
       } 
@@ -69,7 +69,7 @@
                     <input type="checkbox" name="" id="checkbox">  
                      <p>Do you want to get daily weekly notifications about our new stationery items ?</p>   
                     </div>
-                    <input type="submit" value="Sign Up" name="submit" class="signup-submit">
+                    <input type="submit" value="Sign Up" name="signup-btn" class="signup-submit">
                 </form>
         </div>
       </div>

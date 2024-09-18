@@ -8,7 +8,7 @@ $type = $_GET['type'];
 // Fetch data from mysql based on type
 
 if($type == 'products'){
-    $SQL = "SELECT * FROM `products`";
+    $SQL = "SELECT * FROM `products` ORDER BY product_ID DESC";
     $result = mysqli_query($conn, $SQL);
 
     $products = [];
