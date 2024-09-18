@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
       Array.from(navIcons).forEach((icon) => {
         icon.style.filter = "invert(1)";
       });
-      logo.style.filter = "invert(0)";
-      collapseBtn.style.filter = "invert(0)";
+      // logo.style.filter = "invert(0)";
+      // collapseBtn.style.filter = "invert(0)";
     }
   };
 

@@ -224,12 +224,13 @@ header nav .nav-link-ul li .link{
 
 header nav .nav-logo-div{
     padding-right: 0;
+    padding-top: 50px;
     color: white;
 }
 
 header nav .nav-logo-div img{
-    /* width: 130px; */
-    height: 60px;
+    width: 200px;
+    height: auto;
 }
 
 header nav .nav-links-div{
@@ -366,7 +367,7 @@ header .offcanvas-links li a{
 #login-pass{
     margin-top: 20px;
 }
-.login-inputs button{
+.login-inputs #loginsubmit{
     width: 400px;
     height: 45px;
     background-color: var(--primary-color);
@@ -392,7 +393,7 @@ header .offcanvas-links li a{
     .login-inputs input{
         width: 400px;
     }    
-    .login-inputs button{
+    .loginsubmit{
         width: 400px;
     }    
 }
@@ -400,7 +401,7 @@ header .offcanvas-links li a{
     .login-inputs input{
         width: 80vw;
     }    
-    .login-inputs button{
+    .loginsubmit{
         width: 80vw;
     }    
 }
