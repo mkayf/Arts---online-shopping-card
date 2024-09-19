@@ -142,7 +142,7 @@
       </div>
       
       <section class="map container-fluid">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.206655429755!2d66.98906417444556!3d24.85679054540611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb315f0c35175ad%3A0x8b42321c6f7d094c!2sHaji%20Abdullah%20Haroon%20Goverment%20College!5e0!3m2!1sen!2s!4v1707752362165!5m2!1sen!2s" width="1000" height="500" style="border: 2px solid grey;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.357549383497!2d66.99809537572811!3d24.851635045609903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f0079d4d7ab%3A0x364b2df628588b71!2sBoltan%20market!5e0!3m2!1sen!2s!4v1726756162581!5m2!1sen!2s" width="1100" height="450" style="border-radius:16px;  border:2px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
 
 
