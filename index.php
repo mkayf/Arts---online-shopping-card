@@ -47,6 +47,10 @@ for($i = 0; $i < count($array_of_queries); $i++){
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles/home-style.css">
+
+    <!-- aos-library  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+
 </head>
 
 <body>
@@ -75,8 +79,8 @@ for($i = 0; $i < count($array_of_queries); $i++){
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="2000">
-                        <div class="c-content-div">
+                    <div class="carousel-item active">
+                        <div class="c-content-div" data-aos="fade-right" data-aos-duration="2000">
                             <h1>Your One-Stop Shop for Stationery, Gifts, and More</h1>
                             <p>Explore our carefully curated collection of unique gifts, arts, and accessories. Shop
                                 with ease and have your favorites delivered right to your door.</p>
@@ -95,7 +99,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
         </section>
 
         <!-- Top trending products  -->
-        <section class="Trending-products">
+        <section class="Trending-products" data-aos="fade-up" data-aos-duration="2000" >
             <div class="trending-products-heading my-4">
                 <h1>Top Trending products</h1>
             </div>
@@ -138,7 +142,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
         </section>
 
         <!-- Free delivery section -->
-        <section class="free-delivery-section container">
+        <section class="free-delivery-section container" data-aos="fade-up" data-aos-duration="2000">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="f-delivery-content col col-12 col-md-6 col-lg-6">
                     <h2>Free Delivery!</h2>
@@ -154,7 +158,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
         <!-- Free delivery section -->
 
         <!-- Shop by categories section -->
-        <section class="product-categories-section">
+        <section class="product-categories-section" data-aos="fade-up" data-aos-duration="2000">
             <h1 class="my-5 text-center">Shop by categories</h1>
             <div class="c-column-container">
                 <div class="c-column-1 c-column">
@@ -204,7 +208,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
         <!-- Shop by categories section -->
 
         <!-- Feedback-form  -->
-        <section class="feedback-form">
+        <section class="feedback-form"data-aos="fade-right" data-aos-duration="1000">
             <div class="feedback-container">
                 <div class="feedback-img">
                     <img src="https://cdni.iconscout.com/illustration/premium/thumb/feedback-form-illustration-download-in-svg-png-gif-file-formats--online-survey-checklist-questionnaire-pack-business-illustrations-5735134.png" alt="">
@@ -250,6 +254,12 @@ for($i = 0; $i < count($array_of_queries); $i++){
     
     <!-- Vanilla JS -->
     <script src="./scripts/script.js"></script>
+
+    <!-- aos-library-js  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>                    
     
 </body>
 
