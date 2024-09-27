@@ -115,5 +115,8 @@
 
 <!-- Vanilla JS -->
 <script src="./scripts/script.js"></script>
+
+<!-- AJAX scripting -->
+<script src="./scripts/fetchData.js"></script>
 </body>
 </html>

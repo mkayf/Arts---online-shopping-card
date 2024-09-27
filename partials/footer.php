@@ -1,3 +1,37 @@
+<?php
+    include './partials/db_connection.php';
+
+    // if(isset($_POST['news-btn'])){
+    //     $news_mail = mysqli_real_escape_string($conn, $_POST['news_email']);
+    //     $SQL = "INSERT INTO `newsletter_subscription` (email) VALUES ('$news_mail')";
+    //     $result = mysqli_query($conn, $SQL);
+
+    //     if($result){
+    //         echo "<script>
+    //         window.onload = () => {
+    //             let newsModal = new bootstrap.Modal(document.getElementById('news-modal'));
+    //             newsModal.show();
+    //         }
+    //         </script>";
+    //     }
+    // }
+
+?>
+
+    <!-- News letter modal -->
+    <div class="modal" tabindex="1" id="news-modal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">News letter subscription</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Thanks for subscribing to our news letter. You will be notified with latest updates about our shop.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
         <!-- footer  -->
         <section class="footer-section">
@@ -9,32 +43,34 @@
                     </a>
                     </div>
                     <ul>
-                        <li><i class="fa-solid fa-location-dot"></i>Boltan market karachi</li>
-                        <li><i class="fa-solid fa-phone"></i>03343739795</li>
-                        <li><i class="fa-solid fa-envelope"></i>Arts@gmail.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i><span>Beverlee Squares, Arnoldberg</span></li>
+                        <li><a href="tel:999-888-777" class="a-tag"><i class="fa-solid fa-phone"></i><span class="link text-white">999-888-777</span></a></li>
+                        <li><a href="mailto:arts.stationerystore@gmail.com" class="a-tag"><i class="fa-solid fa-envelope"></i><span class="link text-white">arts.stationerystore@gmail.com</span></a></li>
                     </ul>
                     <div class="footer-socialmedia-icons">
-                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-youtube"></i></a>
-                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="footer-content-2">
                     <h6>Information</h6>
                     <ul>
-                        <li><a href="">My Accounts</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Shop</a></li>
+                        <li><a href="/arts-online-shopping-cart/index.php">Home</a></li>
+                        <li><a href="/arts-online-shopping-cart/contact-page.php">Contact</a></li>
+                        <li><a href="/arts-online-shopping-cart/about.php">About Us</a></li>
+                        <li><a href="/arts-online-shopping-cart/products.php">Products</a></li>
                     </ul>
                 </div>
                 <div class="footer-content-3">
                     <h6>Join Our Newsletter Now</h6>
                     <p>Get E-mail updates about our latest shop and special offers.</p>
                     <div class="footer-input">
-                        <input type="email" class="footer-mail" placeholder="Enter Your Mail">
-                        <input type="submit" class="footer-btn" value="SUBSCRIBE">
+                        <form id="news-form">
+                            <input type="email" class="footer-mail" placeholder="Enter Your Mail" name="news_email">
+                            <input type="submit" class="footer-btn" value="SUBSCRIBE" name="news-btn">
+                        </form>
                     </div>
                 </div>
                 </div> <!--footer-container -->
@@ -53,12 +89,5 @@
                 </div>
                 </div>
         </section>
-
-
-
-
-    <!-- Bootsrap-js-link  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
   </body>
 </html>

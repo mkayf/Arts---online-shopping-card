@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let navLinks = document.getElementsByClassName("link");
   let navIcons = document.getElementsByClassName("nav-icons");
   // let logo = document.getElementById("logo");
-  let collapseBtn = document.getElementsByClassName("collapse-btn")[0];
+  let collapseBtnImg = document.getElementsByClassName("collapse-img")[0];
   let navLogoDiv = document.querySelector('.nav-logo-div');
   // Animate the navbar on scroll
 
@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.style.filter = "invert(0)";
       });
       navLogoDiv.style.paddingTop = '0';
-      // console.log(navLogoDiv);
-      collapseBtn.style.filter = "invert(1)";
+      collapseBtnImg.style.filter = "invert(0)";
     } else {
       document.getElementById("navbar").classList.remove("sticky");
       // Change color of navigation elements to default on top scroll
@@ -32,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.style.filter = "invert(1)";
       });
       navLogoDiv.style.paddingTop = '20px';
+      collapseBtnImg.style.filter = "invert(1)";
     }
   };
 
@@ -60,9 +60,11 @@ if(productImg1 && productImg2 && productMainImg){
       productImg2.addEventListener("click", () => {
         productMainImg.src = productImg2. src;
       });
-} 
+}
 
 });
+
+// function to display modal on news letter subscription
 
 
 

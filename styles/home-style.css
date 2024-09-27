@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 /* DancingScript for headings */
 
 /* Regular */
@@ -78,6 +76,7 @@
 }
 .banner h1{
     font-size: 4rem;
+    font-family: var(--sen-bold);
 }
 
 @media (max-width: 576px){
@@ -177,11 +176,23 @@ header nav .collapse-btn img{
 }
 
 header nav .nav-links-div, .nav-logo-div, .nav-icons-div{
-    flex-basis: 33.33%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
+}
+
+.nav-links-div{
+    flex-basis: 40%;
+}
+
+
+.nav-logo-div{
+    flex-basis: 20%;
+}
+
+.nav-icons-div{
+    flex-basis: 40%;
 }
 
 header nav .nav-link-ul{
@@ -197,6 +208,7 @@ header nav .nav-link-ul li{
     font-size: 1.1rem;
     letter-spacing: 0.5px;
     position: relative;
+    text-align: center;
 }
 
 header nav .nav-link-ul li::before{
@@ -226,8 +238,7 @@ header nav .nav-logo-div{
     padding-right: 0;
     padding-top: 20px;
     color: white;
-    /* border: 2px solid red; */
-    display: flex;
+    display: flex;  
     justify-content: center;
     align-items: center;
 }
@@ -314,13 +325,17 @@ header .offcanvas-links li a{
     header nav .nav-logo-div{
         padding-right: 10px;
     }
-    header nav .nav-logo-div #logo{
-        height: 50px;
-    }    
 }
 
 /* Login modal styling */
 
+.modal-body{
+    font-family: var(--sen-regular);
+}
+
+.modal-title{
+    font-family: var(--sen-semibold);
+}
 
 #loginModal .modal-body{
     position: relative;
@@ -340,6 +355,7 @@ header .offcanvas-links li a{
     align-items: center;
     padding: 20px;
     background-color: var(--bg-color);
+    width: 100%;
 }
 
 .login-container h1{
@@ -354,9 +370,10 @@ header .offcanvas-links li a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .login-inputs input{
-    width: 400px;
+    width: 90%;
     height: 40px;
     padding-left: 10px;
     font-size: 16px;
@@ -373,7 +390,7 @@ header .offcanvas-links li a{
     margin-top: 20px;
 }
 .login-inputs #loginsubmit{
-    width: 400px;
+    width: 90%;
     height: 45px;
     background-color: var(--primary-color);
     font-family: var(--sen-regular);
@@ -394,22 +411,6 @@ header .offcanvas-links li a{
 
 /* login-form-Responsive  */
 
-@media (max-width: 768px){
-    .login-inputs input{
-        width: 400px;
-    }    
-    .loginsubmit{
-        width: 400px;
-    }    
-}
-@media (max-width: 550px){
-    .login-inputs input{
-        width: 80vw;
-    }    
-    .loginsubmit{
-        width: 80vw;
-    }    
-}
 /* Login form styling */
 
 
@@ -545,113 +546,103 @@ header .offcanvas-links li a{
 
 /* Hero section and carousel styling goes here */
 .hero-section {
-    height: 650px;
+    height: 700px;
     width: 100%;
-    clip-path: ellipse(90% 100% at 50% 0%);
+    clip-path: ellipse(95% 100% at 50% 0%);
     background-color: var(--primary-color);
-    position: relative;
-}
-
-.hero-section .carousel{
-    height: 650px;
-}
-
-
-.hero-section .carousel .carousel-item{
-    height: 650px;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
-    /* border: 2px solid yellow; */
-    padding: 0 48px;
 }
 
-.carousel-item .c-content-div{
-    width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
+.hero-section .row{
+    /* border: 2px solid white; */
+    padding: 0 100px;
 }
-.carousel-item .c-content-div h1{
+
+.c-content-div h1{
+    font-size: 3.5rem;
     font-family: var(--sen-bold);
-    font-size: 3.2rem;
     color: white;
+    margin-bottom: 12px;
 }
 
-.carousel-item .c-content-div p{
+.c-content-div p{
     color: white;
     font-family: var(--sen-regular);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    margin-bottom: 26px;
 }
 
-.carousel-item .c-img-div img{
-    object-fit: cover;
+.hero-section .c-img-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+@media (max-width: 1200px){
+    .hero-section{
+        height: 600px;
+    }
+    .hero-section .c-img-div img{
+        width: 400px;
+    }
 
-/* Carousel media queries */
-@media (max-width: 992px) {
-.carousel-item .c-content-div{
-    width: 400px;
- }
-.carousel-item .c-content-div h1{
-    font-size: 2.5rem;
- }
- .carousel-item .c-content-div p{
-    font-size: 1rem;
- }
- .carousel-item .c-img-div img{
-    width: 350px;
- }   
+    .c-content-div h1{
+        font-size: 2.5rem;
+    }
+    
+    .c-content-div p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 992px){
+    .hero-section .c-content-div{
+        margin-top: 140px;
+        width: 100%;
+    }
+    .hero-section .c-img-div{
+        margin-top: 20px;
+    }
+    .hero-section .c-img-div img{
+        width: 280px;
+    }
 }
 
 @media (max-width: 768px){
-
-.hero-section{
-    clip-path: ellipse(110% 100% at 50% 0%);
-} 
-.hero-section .carousel .carousel-item{
-    gap: 24px;
-    margin-top: 32px;
-}
-.carousel-item{
-    flex-direction: column;
-}
- .carousel-item .c-content-div{
-    width: 100%;
-    text-align: center;
-    align-items: center;
- }
- .carousel-item .c-content-div h1{
-    font-size: 2rem;
- }
- .carousel-item .c-img-div img{
-    width: 300px;
- }
+    .hero-section{
+        height: 500px;
+    }
+    .hero-section .row{
+        padding: 0 30px;
+    }
+    .hero-section .c-content-div{
+        margin-top: 0;
+    }
+    .c-img-div{
+        display: none;
+    }
+    .c-img-div img{
+        display: none   ;
+    }
 }
 
 @media (max-width: 576px){
-    .hero-section .carousel .carousel-item{
-        padding: 0 16px;
-        margin-top: 32px;
+    .hero-section{
+        clip-path: ellipse(100% 100% at 50% 0%);
     }
-    .carousel-item .c-content-div{
-        text-align: left;
-        align-items: flex-start;
-        gap: 4px;
-        padding: 0 20px;
+    .hero-section .row{
+        padding: 0 12px;
     }
-    .carousel-item .c-content-div h1{
+    .c-content-div h1{
         font-size: 1.5rem;
     }
-    .carousel-item .c-img-div img{
-       width: 250px;
-    }
+    .c-content-div .purple-btn{
+        width: 100%;
+    }   
 }
+
 
 /* Trending products section */
 
@@ -1206,6 +1197,10 @@ header .offcanvas-links li a{
     border: 2px solid white;
 }
 
+#floatingTextarea2{
+    font-family: var(--sen-regular);
+}
+
 /* Feedback-form-Responsive  */
 
 @media (max-width:1200px){
@@ -1339,6 +1334,14 @@ header .offcanvas-links li a{
 }
 .footer-heading-1 img{
     width: 70px;
+}
+
+.link{
+    margin-left: 14px;
+}
+
+.a-tag{
+    text-decoration: none;
 }
 
 .footer-content-1 ul{

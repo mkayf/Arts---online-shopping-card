@@ -3,6 +3,7 @@
 include './partials/db_connection.php';
 include './partials/render_rating_stars.php';
 
+
 // Fetch products to populate trending products section.
 // NOTE:
 // We are assuming these products are in trending because of pre online sales according to owner.
@@ -26,7 +27,6 @@ for($i = 0; $i < count($array_of_queries); $i++){
 }
 
 
-
 ?>
 
 <!doctype html>
@@ -47,12 +47,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles/home-style.css">
-
-    <!-- aos-library  -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
-
 </head>
-
 <body>
 
     <!-- Login form here -->
@@ -67,39 +62,22 @@ for($i = 0; $i < count($array_of_queries); $i++){
     <!-- Navbar -->
 
     <main>
-        <section class="hero-section">
-            <!-- carousel -->
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                <div class="carousel-indicators" data-bs-pause="false" data-bs-ride="carousel">
-                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="c-content-div" data-aos="fade-right" data-aos-duration="2000">
-                            <h1>Your One-Stop Shop for Stationery, Gifts, and More</h1>
-                            <p>Explore our carefully curated collection of unique gifts, arts, and accessories. Shop
-                                with ease and have your favorites delivered right to your door.</p>
-                            <a href="/arts-online-shopping-cart/products.php" class="purple-btn">Shop now</a>
-                        </div>
-                        <div class="c-img-div">
-                            <img src="./assets/images/hero-img-1.png" alt="" width="500px">
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000"></div>
-                </div>
+        <section class="hero-section container-fluid">
+            <div class="row d-flex justify-content-center align-items-center">
+            <div class="col col-12 col-md-12 col-lg-7 c-content-div">
+                <h1>Your One-Stop Shop for Stationery, Gifts, and More</h1>
+                <p>Explore our carefully curated collection of unique gifts, arts, and accessories. Shop
+                    with ease and have your favorites delivered right to your door.</p>
+                <a href="/arts-online-shopping-cart/products.php" class="purple-btn">Shop now</a>
             </div>
-            <!-- carousel -->
+            <div class="col col-12 col-md-12 col-lg-5 c-img-div">
+                <img src="./assets/images/hero-img-1.png" alt="" class="img-fluid">
+            </div>
+            </div>
         </section>
 
         <!-- Top trending products  -->
-        <section class="Trending-products" data-aos="fade-up" data-aos-duration="2000" >
+        <section class="Trending-products">
             <div class="trending-products-heading my-4">
                 <h1>Top Trending products</h1>
             </div>
@@ -142,7 +120,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
         </section>
 
         <!-- Free delivery section -->
-        <section class="free-delivery-section container" data-aos="fade-up" data-aos-duration="2000">
+        <section class="free-delivery-section container">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="f-delivery-content col col-12 col-md-6 col-lg-6">
                     <h2>Free Delivery!</h2>
@@ -158,7 +136,7 @@ for($i = 0; $i < count($array_of_queries); $i++){
         <!-- Free delivery section -->
 
         <!-- Shop by categories section -->
-        <section class="product-categories-section" data-aos="fade-up" data-aos-duration="2000">
+        <section class="product-categories-section">
             <h1 class="my-5 text-center">Shop by categories</h1>
             <div class="c-column-container">
                 <div class="c-column-1 c-column">
@@ -207,8 +185,23 @@ for($i = 0; $i < count($array_of_queries); $i++){
         </section>
         <!-- Shop by categories section -->
 
+        <!-- Feedback modal -->
+        <div class="modal" tabindex="1" id="feedback-modal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Thanks for your feedback</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>This will help us to improve our products and services for you</p>
+      </div>
+    </div>
+  </div>
+</div>
+
         <!-- Feedback-form  -->
-        <section class="feedback-form"data-aos="fade-right" data-aos-duration="1000">
+        <section class="feedback-form">
             <div class="feedback-container">
                 <div class="feedback-img">
                     <img src="https://cdni.iconscout.com/illustration/premium/thumb/feedback-form-illustration-download-in-svg-png-gif-file-formats--online-survey-checklist-questionnaire-pack-business-illustrations-5735134.png" alt="">
@@ -217,17 +210,17 @@ for($i = 0; $i < count($array_of_queries); $i++){
                     <h4>We Value Your Insights Share Your Feedback to Help Us Improve .</h4>
                     <div class="mb-3 form-input" >
                         <label for="full-name" class="form-label">Full name</label>
-                        <input type="text" class="form-control" id="full-name" aria-describedby="emailHelp" placeholder="Enter your name">
+                        <input type="text" class="form-control" id="full-name" name="f_name" aria-describedby="emailHelp" placeholder="Enter your name">
                       </div>
                     <div class="mb-3 form-input">
                       <label for="email" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your Email address">
+                      <input type="email" class="form-control" id="email" name="f_email" aria-describedby="emailHelp" placeholder="Enter your Email address">
                     </div>
                     <div class="mb-4 form-input">
                         <label for="exampleInputEmail1" class="form-label">Share your thoughts</label>
-                       <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                       <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="f_comment"></textarea>
                      </div>
-                    <button type="submit" class="btn btn-primary form-input">Submit</button>
+                    <button type="submit" class="btn btn-primary form-input" name="submit-feedback">Submit</button>
                   </form>
             </div>
          </section>
@@ -255,12 +248,8 @@ for($i = 0; $i < count($array_of_queries); $i++){
     <!-- Vanilla JS -->
     <script src="./scripts/script.js"></script>
 
-    <!-- aos-library-js  -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>                    
-    
+    <!-- AJAX scripting -->
+    <script src="./scripts/fetchData.js"></script>
 </body>
 
 </html>

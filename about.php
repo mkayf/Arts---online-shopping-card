@@ -3,27 +3,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- tittle  -->
+    <!-- title  -->
     <title>How we started this ARTS - Stationery Shop</title>
 
-    <!-- BOOTSTRAP CDN LINK -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    
-    <!-- CUSTOM CSS LINK -->
-    <link rel="stylesheet" href="./styles/about.css">
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap Link CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/home-style.css">
 
-    <!-- Home css -->
-     <link rel="stylesheet" href="./styles/home-style.css">
-
-    <!-- FONTAWESOME LIBRARY CDN LINK -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- About page css -->
+     <link rel="stylesheet" href="./styles/about.css">
 
 </head>
 <body>
     <!-- navbar -->
      <?php include './partials/navbar.php'; ?>
       
-  
+    <!-- login modal -->
+    <?php include './partials/login-modal.php'; ?>
+
+    <!-- signup modal -->
+    <?php include './partials/signup-modal.php'; ?>
+
+
       <!-- about section banner -->
       <div class="banner" id="about-banner">
         <h1 class="sleep" >About Us</h1> 
@@ -33,19 +42,17 @@
       <div class="container about-section">
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 about-img-div">
-             
-              <img src="https://media.istockphoto.com/id/951331906/photo/cheerful-young-smiling-bearded-male-model-wearing-trendy-glasses-points-away-demonstrates.jpg?s=612x612&w=0&k=20&c=O51QBx-4TX4SNjHHczF0Tf2_j7hsXHsa25HbNPqpFSY=" alt="about-img" class="die">
-              
+              <img src="./assets/images/about-img.png" alt="about-img" class="img-fluid">
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 about-text-div">
-                <h1 >How was ARTS stationery shop started ?</h1><br>
+                <h1 >How was ARTS stationery shop started</h1><br>
                 <p >
-                    Arts began with a simple yet profound vision: to celebrate and elevate the art of writing and stationery. Our journey started with a deep-seated passion for the tools that fuel creativity and productivity, leading us to create a space where exceptional stationery meets impeccable design.The founders of Arts were driven by the belief that every written word, every doodle, and every note deserves the perfect medium. What began as a small, heartfelt endeavor has grown into a haven for stationery enthusiasts, professionals, and creatives alike. From the very beginning, our focus has been on curating a collection that reflects the beauty and functionality of high-quality stationery.
-                </p>
+                    Arts began with a simple yet profound vision: to celebrate and elevate the art of writing and stationery. Our journey started with a deep-seated passion for the tools that fuel creativity and productivity, leading us to create a space where exceptional stationery meets impeccable design.</p>
+                    <p>The founders of Arts were driven by the belief that every written word, every doodle, and every note deserves the perfect medium. What began as a small, heartfelt endeavor has grown into a haven for stationery enthusiasts, professionals, and creatives alike. From the very beginning, our focus has been on curating a collection that reflects the beauty and functionality of high-quality stationery.</p>
                 <p>
-                    We meticulously select each product in our inventory, working with renowned brands and artisans who share our dedication to excellence. Our journey has been one of continual discovery and refinement, as we seek out the finest writing instruments, the most elegant paper products, and innovative office supplies that inspire and empower our customers.At Arts, we understand that the right stationery can transform a mundane task into a joyful experience. That’s why we’ve created a space where our customers can find not just products, but inspiration.</p>
+                    We meticulously select each product in our inventory, working with renowned brands and artisans who share our dedication to excellence.</p>
 
-                <a  href='/products'><button class="about-btn">Shop Products <i class="fa-solid fa-arrow-right"></i></button></a>
+                <a  href='/arts-online-shopping-cart/products.php'><button class="purple-btn">Shop Products <i class="fa-solid fa-arrow-right"></i></button></a>
             </div>
         </div>
       </div>
@@ -118,11 +125,20 @@
   <!-- footer -->
   <?php include './partials/footer.php'; ?>
 
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Popper JS before Bootstrap bundles -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <!-- Boostrap Script CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     
+    <!-- Vanilla JS -->
+    <script src="./scripts/script.js"></script>
+
+    <!-- AJAX scripting -->
+    <script src="./scripts/fetchData.js"></script>
 
 </body>
 </html>

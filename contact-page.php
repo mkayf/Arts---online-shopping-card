@@ -1,3 +1,33 @@
+<?php
+// Save customer contact inqueries to db
+  include './partials/db_connection.php';
+
+  $message_sent = false;
+  $fields_empty = false;
+
+  if(isset($_POST['send-message'])){
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $subject = mysqli_real_escape_string($conn, $_POST['subject']);
+    $message = mysqli_real_escape_string($conn, $_POST['message']);
+    
+    if(!empty($name) && !empty($email) && !empty($message)){
+      $SQL = "INSERT INTO `customer_contact` (contact_name, contact_email, contact_subject, contact_message) VALUES ('$name', '$email', '$subject', '$message')";
+      $result = mysqli_query($conn, $SQL);
+
+      if($result){
+        $message_sent = "Thanks for contacting us, we will reply you soon!";
+      }
+    }
+    else{
+      $fields_empty = "Please fill all the required fields";
+    }
+
+  }  
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -6,7 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- title -->
-    <title>Contact page</title>
+    <title>Get in touch with us - Arts</title>
 
     <!-- Fav icon -->
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
@@ -24,42 +54,14 @@
 
     <!-- Home page css link -->
      <link rel="stylesheet" href="./styles/home-style.css">
-
-    
-     <!-- contact-form-php-start  -->
-     <?php
-     
-    if(isset($_POST['contact-submit'])){
-      $to = "muhammadkaif150@gmail.com";
-      $subject = $_POST['fullname'];
-      $message = $_POST['message'];
-      $from = $_POST['email'];
-      $headers = 'From : $from';
-
-      // mail($to,$subject,$message,$from);
-
-      if(mail($to,$subject,$message,$from)){
-        ?>
-        <script>
-          alert("mail has been send successfully");
-        </script>
-        <?php
-      }
-      else{
-        ?>
-        <script>
-          alert("mail send error");
-        </script>
-        <?php
-      }
-    }
-     ?>
-
 </head>
 <body>
 
   <!-- Login form here -->
-  <?php include './partials/login-modal.php' ?>
+  <?php include './partials/login-modal.php'; ?>
+
+  <!-- Signup form here -->
+  <?php include './partials/signup-modal.php'; ?>
 
   <!-- Navbar -->
     <?php include './partials/navbar.php'; ?> 
@@ -77,62 +79,77 @@
     </section>
 
     <!-- contact-page-content  -->
-     
+
+    <!-- Contact modal -->
+    <div class="modal" tabindex="1" id="contact-modal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Thanks for reaching out!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Our team will review your message and contact you soon.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
     <section class="contact-content container-fluid">
         <div class="row contact-content-0">
-          <div class="col-3 contact-content-1">
+          <div class="col col-12 col-md-12 col-lg-4 contact-content-1 contact-content">
             <i class="fa-solid fa-envelope"></i>
             <p class="p-1">Email Us</p>
-            <p class="p-2">sammadaltaf43@gmail.com</p>
+            <p class="p-2 mail"><a href="mailto:arts.stationerystore@gmail.com" class="text-decoration-none text-white">arts.stationerystore@gmail.com</a></p>
           </div>
-          <div class="col-3 contact-content-2">
+          <div class="col col-12 col-md-12 col-lg-4 contact-content-2 contact-content">
           <i class="fa-solid fa-phone"></i>
           <p class="p-1">Call Us</p>
-          <p class="p-2">03373169656</p>
+          <p class="p-2"><a href="tel:999-888-777" class="text-decoration-none text-white">999-888-777</a></p>
           </div>
-          <div class="col-3 contact-content-3">
+          <div class="col col-12 col-md-12 col-lg-4 contact-content-3 contact-content">
           <i class="fa-solid fa-location-dot"></i>
           <p class="p-1">Location</p> 
-          <p class="p-2-extra">Karachi, lyari, khaddamarket, near Abdullah haroon hall</p>
+          <p class="p-2">86669 Beverlee Squares, Arnoldberg</p>
           </div>
           </div>
           <span class="line"></span>
       </section>
 
       <!-- have any Question  -->
-      <section class="contact-form container-fluid">
-        <form action="contact-page.php" method="POST" class="contact-form-heading">
-          <h4>Contact Us</h4>
-          <h5>Have Any Questions?</h5>
+
+      <section class="contact-form-section container">
+        <h1 class="c-h">Get in touch with us</h1>
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="contact-form-content col col-12 col-md-12 col-lg-6">
+            <form class="contact-form">
+            <div class="mb-3">
+              <label for="name">Name</label><span>*</span>
+              <input type="text" name="name" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="email">Email</label><span>*</span>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="subject">Subject</label>
+              <input type="num" name="subject" id="subject">
+            </div>
+            <div class="mb-3">
+              <label for="message">Message</label><span>*</span>
+              <textarea name="message" id="message"></textarea>
+            </div>
+            <div class="mb-2">
+              <span class="text-white" id="contact-error"></span>
+            </div>
+            <button type="submit" name="send-message" class="purple-btn">Send message <i class="fa-regular fa-paper-plane"></i></button>
+            </form>
+          </div>
+          <div class="contact-form-img col col-12 col-md-12 col-lg-6">
+            <img src="./assets/images/contact-img.png" alt="contact us image">
+          </div>
         </div>
-        <div class="contact-form-content">
-          <div class="row">
-          <div class="bug col-12">
-          <h5 class="heading-1" >Write comment</h5>
-          <Textarea name="message" placeholder="Type your comment"></Textarea>
-          <span id="textarea_error"></span>
-        </div>
-      </div>
-      <div class="row">
-          <div class="bug col-12 col-sm-12 col-md-4 col-lg-4">
-          <h5 class="heading-2">Full Name</h5>
-          <input type="text" name="fullname" placeholder="Enter your name" class="input-1">
-          <span id="name_error"></span>
-        </div>
-          <div class="bug col-12 col-sm-12 col-md-4 col-lg-4">
-          <h5 class="heading-3">Email</h5>
-          <input type="email" name="email" id="" placeholder="Enter your email Address" class="input-2">
-          <span id="email_error"></span>
-        </div>
-          <div class="bug col-12 col-sm-12 col-md-4 col-lg-4">
-          <h5 class="heading-4 phone-head">Phone Number</h5>
-          <input type="tel" name="phone-no" id="" placeholder=" phone number" class="input-3">
-          <span id="phone_error"></span>
-        </div>
-      </div>
-          <a href=""><button name="contact-submit">Submit</button></a>
-          <span id="submit_error"></span>
-      </form>
       </section>
 
       <!-- map  -->
@@ -141,8 +158,8 @@
         <h5>Location</h5>
       </div>
       
-      <section class="map container-fluid">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.357549383497!2d66.99809537572811!3d24.851635045609903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f0079d4d7ab%3A0x364b2df628588b71!2sBoltan%20market!5e0!3m2!1sen!2s!4v1726756162581!5m2!1sen!2s" width="1100" height="450" style="border-radius:16px;  border:2px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <section class="map-section container-fluid">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24879.17236643985!2d-81.16452232664876!3d38.78900594735848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88496d0ef96d7a1b%3A0x4d07a506a5b575b2!2sArnoldsburg%2C%20WV%2025234%2C%20USA!5e0!3m2!1sen!2s!4v1727014227368!5m2!1sen!2s" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
 
 
@@ -167,5 +184,8 @@
 
     <!-- vanilla js -->
      <script src="./scripts/script.js"></script>
+
+     <!-- AJAX scripting -->
+    <script src="./scripts/fetchData.js"></script>
 </body>
 </html>

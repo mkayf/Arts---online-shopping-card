@@ -126,3 +126,99 @@ const actionOnProduct = (productId, action) => {
   }
     
 };
+
+
+// A function to send email of user subscribed to news letter in db
+
+let newsModal = new bootstrap.Modal(document.getElementById('news-modal'));
+
+const newsForm = document.getElementById('news-form');
+newsForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = e.target.news_email.value;
+  fetch('./partials/sendData.php?type=newsletter_sub', {
+    method : 'POST',
+    headers : {
+      "Content-Type" : "Application/json"
+    },
+    body : JSON.stringify(email)
+
+  })
+  .then(response => response.json())
+  .then((value) => {
+    console.log(value);
+    newsModal.show()    
+  })
+  .catch(error => console.log(error));
+  
+  e.target.reset();
+})
+
+
+// A function to submit feedback form to the db
+
+const feedbackForm = document.getElementsByClassName('feedback-form')[0];
+
+if(feedbackForm){
+
+  feedbackForm.addEventListener('submit', (e) => {
+
+    const feedbackModal = new bootstrap.Modal(document.getElementById('feedback-modal'));
+  
+    e.preventDefault();
+    const fullName = e.target.f_name.value;
+    const email = e.target.f_email.value;
+    const comment = e.target.f_comment.value;
+  
+    fetch('./partials/sendData.php?type=feedback', {
+      method : "POST",
+      headers : {
+        'Content-Type' : 'Application/json'
+      },
+      body : JSON.stringify({fullName, email, comment})
+    })
+    .then(response => response.json())
+    .then(feedbackModal.show())
+    .catch(error => console.log(error));
+  
+    e.target.reset();
+  })
+}
+
+
+
+
+// A function to submit contact us form to db
+
+const contactForm = document.getElementsByClassName('contact-form')[0];
+
+if(contactForm){
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const contactModal = new bootstrap.Modal(document.getElementById('contact-modal'));
+
+  const name = e.target.name.value;
+  const email = e.target.email.value;
+  const subject = e.target.subject.value;
+  const message = e.target.message.value;
+
+  if(name !== '' && email !== '' && message !== ''){
+    fetch('./partials/sendData.php?type=contact', {
+      method : "POST",
+      headers : {
+        'Content-Type' : 'Application/json'
+      },
+      body : JSON.stringify({name, email, subject, message})
+    })
+    .then(response => response.json())
+    .then(contactModal.show())
+    .catch(error => console.log(error));
+    document.getElementById('contact-error').innerHTML = '';
+  }
+  else{
+    document.getElementById('contact-error').innerHTML = 'Please fill all required fields highlighted with *';
+  } 
+  e.target.reset();
+})
+}
